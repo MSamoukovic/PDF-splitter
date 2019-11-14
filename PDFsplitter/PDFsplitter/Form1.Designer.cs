@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.pathTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(107, 273);
+            this.button1.Location = new System.Drawing.Point(158, 449);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 50);
             this.button1.TabIndex = 0;
@@ -48,31 +49,37 @@
             // 
             this.pathTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.pathTextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.pathTextBox.Location = new System.Drawing.Point(38, 24);
+            this.pathTextBox.Location = new System.Drawing.Point(12, 12);
             this.pathTextBox.Name = "pathTextBox";
-            this.pathTextBox.Size = new System.Drawing.Size(242, 23);
+            this.pathTextBox.Size = new System.Drawing.Size(467, 23);
             this.pathTextBox.TabIndex = 1;
             this.pathTextBox.Text = "select the path";
             this.pathTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
             // 
-            // textBox1
+            // panel
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 81);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(348, 140);
-            this.textBox1.TabIndex = 2;
+            this.panel.AutoScroll = true;
+            this.panel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel.Location = new System.Drawing.Point(12, 41);
+            this.panel.Name = "panel";
+            this.panel.Padding = new System.Windows.Forms.Padding(0, 100, 0, 0);
+            this.panel.Size = new System.Drawing.Size(467, 402);
+            this.panel.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(491, 523);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "PDF-splitter";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,7 +89,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox pathTextBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel;
     }
 }
 
