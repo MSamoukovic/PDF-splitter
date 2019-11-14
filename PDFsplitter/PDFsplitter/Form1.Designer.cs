@@ -32,6 +32,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pathTextBox = new System.Windows.Forms.TextBox();
             this.panel = new System.Windows.Forms.Panel();
+            this.kryptonBreadCrumb1 = new ComponentFactory.Krypton.Toolkit.KryptonBreadCrumb();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonBreadCrumb1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -48,12 +50,12 @@
             // pathTextBox
             // 
             this.pathTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.pathTextBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.pathTextBox.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.pathTextBox.Location = new System.Drawing.Point(12, 12);
             this.pathTextBox.Name = "pathTextBox";
             this.pathTextBox.Size = new System.Drawing.Size(467, 23);
             this.pathTextBox.TabIndex = 1;
-            this.pathTextBox.Text = "select the path";
+            this.pathTextBox.Text = "select a destination path";
             this.pathTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
             // 
             // panel
@@ -67,11 +69,23 @@
             this.panel.Size = new System.Drawing.Size(467, 402);
             this.panel.TabIndex = 0;
             // 
+            // kryptonBreadCrumb1
+            // 
+            this.kryptonBreadCrumb1.AutoSize = false;
+            this.kryptonBreadCrumb1.Location = new System.Drawing.Point(0, 0);
+            this.kryptonBreadCrumb1.Name = "kryptonBreadCrumb1";
+            // 
+            // 
+            // 
+            this.kryptonBreadCrumb1.RootItem.ShortText = "Root";
+            this.kryptonBreadCrumb1.SelectedItem = this.kryptonBreadCrumb1.RootItem;
+            this.kryptonBreadCrumb1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 523);
+            this.ClientSize = new System.Drawing.Size(498, 511);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.button1);
@@ -80,6 +94,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDF-splitter";
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonBreadCrumb1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,6 +105,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox pathTextBox;
         private System.Windows.Forms.Panel panel;
+        private Bunifu.Framework.UI.BunifuProgressBar progressBar;
+        private ComponentFactory.Krypton.Toolkit.KryptonBreadCrumb kryptonBreadCrumb1;
     }
 }
 
