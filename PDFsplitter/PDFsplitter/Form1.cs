@@ -34,6 +34,16 @@ namespace PDFsplitter
         private void button1_Click(object sender, EventArgs e)
         {
 
+            if (pathTextBox.Text=="")
+            {
+                messageBoxForm messageBoxForm = new messageBoxForm();
+                messageBoxForm.ShowDialog();
+            }
+
+            else
+            {
+
+           
             OpenFileDialog openFileDialog1 = new OpenFileDialog
             {
                 Filter = "PDF|*.PDF",
@@ -50,28 +60,23 @@ namespace PDFsplitter
                         pdfFile file = new pdfFile(item);
                         pdfFiles.Add(file);
 
-
                         Panel panel1 = new Panel
                         {
                             BackColor = System.Drawing.Color.Silver,
-                            Location = new System.Drawing.Point(5, panel.Controls.Count * 55),
+                            Location = new System.Drawing.Point(0, panel.Controls.Count * 55),
                             Name = "panel1",
-                            Size = new System.Drawing.Size(459, 50),
+                            Size = new System.Drawing.Size(484, 50),
                             TabIndex = 0
-                        };
-                        panel.Controls.Add(panel1);
-
+                        };                     
                         Label nameLabel = new Label
                         {
                             AutoSize = true,
-                            Font = new System.Drawing.Font("Microsoft Sans Serif", 10F),
+                            Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F),
                             Location = new System.Drawing.Point(12, 10),
                             Size = new System.Drawing.Size(61, 17),
-                            TabIndex = 0,                         
-                        };                    
-                        panel1.Controls.Add(nameLabel);
-
-
+                            TabIndex = 0,
+                            Text = file.getName()
+                        };            
                         BunifuProgressBar progressBar = new BunifuProgressBar
                         {
                             BackColor = System.Drawing.Color.Silver,
@@ -82,16 +87,14 @@ namespace PDFsplitter
                             ProgressColor = System.Drawing.Color.Red,
                             Size = new System.Drawing.Size(290, 7),
                             TabIndex = 3
-                    };
-                        panel1.Controls.Add(progressBar);
-   
+                    };   
                         BunifuCheckbox bunifuCheckbox1 = new BunifuCheckbox
                         {
                             BackColor = System.Drawing.Color.Silver,
                             ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140))))),
                             Checked = true,
                             CheckedOnColor = System.Drawing.Color.Silver,
-                            Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
+                            Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0))),
                             ForeColor = System.Drawing.Color.Red,
                             Location = new System.Drawing.Point(320, 20),
                             Margin = new System.Windows.Forms.Padding(4, 4, 4, 4),
@@ -100,19 +103,33 @@ namespace PDFsplitter
                             TabIndex = 0
                         };
 
-                       Label processLabel = new Label
+                        Label processLabel = new Label
                         {
                             AutoSize = true,
-                            Font = new System.Drawing.Font("Microsoft Sans Serif", 10F),
-                            Location = new System.Drawing.Point(350, 36),
+                            Font = new System.Drawing.Font("Microsoft Sans Serif", 9.2F),
+                            Location = new System.Drawing.Point(350, 21),
                             Name = "nameLabel",
                             Size = new System.Drawing.Size(61, 50),
-                            TabIndex = 0,
-                           // Text = file.getName(),
-                        };
-                        panel1.Controls.Add(processLabel);
+                            TabIndex = 0
 
-                        int i =1;
+                        };
+
+
+                            if (file.getNumberOfPages(file.getFileName()) == 1)
+                            {
+                                processLabel.Text = file.getNumberOfPages(file.getFileName()).ToString() + " page";
+                            }
+                            else
+                            {
+                                processLabel.Text = file.getNumberOfPages(file.getFileName()).ToString() + " pages";
+
+                            }
+
+                            panel1.Controls.Add(nameLabel);
+                            panel.Controls.Add(panel1);
+                            panel1.Controls.Add(progressBar);
+
+                            int i =1;
                         for ( i=1; i < file.getNumberOfPages(file.getFileName()) + 1; i++)
                         {
                             //Thread.Sleep(5);
@@ -126,13 +143,13 @@ namespace PDFsplitter
                             {
                                 panel1.Controls.Add(bunifuCheckbox1);
                                 bunifuCheckbox1.Checked = true;
+                                panel1.Controls.Add(processLabel);
                             }
                         }
                     }
                 }
             }
           //  renderList();
-
             for (int i = 0; i < pdfFiles.Count; i++)
             {
                 string pdfFilePath = pdfFiles.ElementAt(i).getFileName();
@@ -153,6 +170,7 @@ namespace PDFsplitter
                     //Console.WriteLine(newPdfFileName);
 
                     splitAndSave(pdfFilePath, outputPath, pageNumber, interval, newPdfFileName);
+                    }
                 }
             }
         }
@@ -161,18 +179,20 @@ namespace PDFsplitter
             using (PdfReader reader = new PdfReader(pdfFilePath))
             {
                 Document document = new Document();
-                PdfCopy copy = new PdfCopy(document, new FileStream(outputPath + "\\" + pdfFileName + ".pdf", FileMode.Create));
-                document.Open();
-
-                for (int pagenumber = startPage; pagenumber < (startPage + interval); pagenumber++)
+                using (PdfCopy copy = new PdfCopy(document, new FileStream(outputPath + "\\" + pdfFileName + ".pdf", FileMode.Create)))
                 {
-                    if (reader.NumberOfPages >= pagenumber)
+                    document.Open();
+
+                    for (int pagenumber = startPage; pagenumber < (startPage + interval); pagenumber++)
                     {
-                        copy.AddPage(copy.GetImportedPage(reader, pagenumber));
-                    }
-                    else
-                    {
-                        break;
+                        if (reader.NumberOfPages >= pagenumber)
+                        {
+                            copy.AddPage(copy.GetImportedPage(reader, pagenumber));
+                        }
+                        else
+                        {
+                            break;
+                        }
                     }
                 }
                 document.Close();
@@ -192,6 +212,10 @@ namespace PDFsplitter
             }
         }
 
-       
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
