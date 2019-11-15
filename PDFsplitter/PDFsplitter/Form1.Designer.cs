@@ -29,40 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pathTextBox = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.button1.color = System.Drawing.Color.Silver;
-            this.button1.colorActive = System.Drawing.Color.Silver;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImagePosition = 0;
-            this.button1.ImageZoom = 0;
-            this.button1.LabelPosition = 40;
-            this.button1.LabelText = "START";
-            this.button1.Location = new System.Drawing.Point(308, 479);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 60);
-            this.button1.TabIndex = 0;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -101,14 +78,14 @@
             this.pathTextBox.Location = new System.Drawing.Point(155, 55);
             this.pathTextBox.Name = "pathTextBox";
             this.pathTextBox.ReadOnly = true;
-            this.pathTextBox.Size = new System.Drawing.Size(484, 25);
+            this.pathTextBox.Size = new System.Drawing.Size(484, 23);
             this.pathTextBox.TabIndex = 0;
             this.pathTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(152, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 13);
@@ -127,9 +104,30 @@
             this.panel.Size = new System.Drawing.Size(484, 365);
             this.panel.TabIndex = 0;
             // 
-            // openFileDialog1
+            // button1
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.button1.AllowDrop = true;
+            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.button1.color = System.Drawing.Color.Silver;
+            this.button1.colorActive = System.Drawing.Color.Silver;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImagePosition = 0;
+            this.button1.ImageZoom = 0;
+            this.button1.LabelPosition = 40;
+            this.button1.LabelText = "Choose a file or drag it here";
+            this.button1.Location = new System.Drawing.Point(155, 467);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 6, 6, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(484, 62);
+            this.button1.TabIndex = 0;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.DragDrop += new System.Windows.Forms.DragEventHandler(this.button1_DragDrop);
+            this.button1.DragEnter += new System.Windows.Forms.DragEventHandler(this.button1_DragEnter);
             // 
             // Form1
             // 
@@ -163,11 +161,10 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuTileButton button1;
         private MetroFramework.Controls.MetroTextBox pathTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Bunifu.Framework.UI.BunifuTileButton button1;
     }
 }
 
