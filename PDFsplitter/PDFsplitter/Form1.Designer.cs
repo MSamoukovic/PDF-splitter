@@ -157,7 +157,6 @@
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuProgressBar progressBar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;

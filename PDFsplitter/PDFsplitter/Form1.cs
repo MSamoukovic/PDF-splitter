@@ -20,11 +20,11 @@ namespace PDFsplitter
     public partial class Form1 : Form
     {
         private List<pdfFile> pdfFiles = new List<pdfFile> { };
-        private void renderList()
+       /* private void renderList()
         {
-            //textBox1.Text = String.Join(Environment.NewLine, pdfFiles);
+            textBox1.Text = String.Join(Environment.NewLine, pdfFiles);
         }
-
+        */
         public Form1()
         {
             InitializeComponent();
