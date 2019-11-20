@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows.Forms;
 
 
@@ -117,10 +118,15 @@ namespace PDFsplitter
                                 processLabel.Text = file.getNumberOfPages(file.getFileName()).ToString() + " pages";
                             }
 
-                            panel1.Controls.Add(nameLabel);
 
-                            panel.Controls.Add(panel1);
+                        panel1.Controls.Add(nameLabel);
+                        panel.Controls.Add(panel1);
+
+
                             panel1.Controls.Add(progressBar);
+
+
+
 
                             int i = 1;
                             for (i = 1; i < file.getNumberOfPages(file.getFileName()) + 1; i++)
@@ -234,7 +240,7 @@ namespace PDFsplitter
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
                 foreach (string item in files)
-                {
+                {                   
                     pdfFile file = new pdfFile(item);
                     pdfFiles.Add(file);
 
@@ -366,7 +372,6 @@ namespace PDFsplitter
                     }
                 }
             }
-
         }
         private void clearButton_Click(object sender, EventArgs e)
         {
