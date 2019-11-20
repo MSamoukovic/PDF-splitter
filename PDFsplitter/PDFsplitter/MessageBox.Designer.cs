@@ -28,27 +28,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(messageBoxForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.okButton = new Bunifu.Framework.UI.BunifuTileButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PDFsplitter.Properties.Resources.adobe_acrobat_pdf_file_512;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(145, 185);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label1.Location = new System.Drawing.Point(168, 71);
+            this.label1.Location = new System.Drawing.Point(179, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(222, 18);
             this.label1.TabIndex = 1;
@@ -56,7 +46,7 @@
             // 
             // okButton
             // 
-            this.okButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.okButton.BackColor = System.Drawing.Color.MediumAquamarine;
             this.okButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.okButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.okButton.color = System.Drawing.Color.Silver;
@@ -69,18 +59,28 @@
             this.okButton.ImageZoom = 0;
             this.okButton.LabelPosition = 31;
             this.okButton.LabelText = "OK";
-            this.okButton.Location = new System.Drawing.Point(209, 123);
+            this.okButton.Location = new System.Drawing.Point(225, 113);
             this.okButton.Margin = new System.Windows.Forms.Padding(6);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(115, 39);
             this.okButton.TabIndex = 2;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::PDFsplitter.Properties.Resources.im;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(145, 185);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // messageBoxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(433, 225);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.label1);

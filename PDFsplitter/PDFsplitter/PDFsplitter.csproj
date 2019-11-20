@@ -76,6 +76,9 @@
     <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="RibbonControlsLibrary, Version=4.0.0.11019, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\RibbonControlsLibrary.4.0.0\lib\net40\RibbonControlsLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Syncfusion.Licensing, Version=17.3460.0.27, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.Licensing.17.3.0.27\lib\net46\Syncfusion.Licensing.dll</HintPath>
     </Reference>
@@ -97,6 +100,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Xander.UI.Web, Version=1.0.0.19, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xander.UI.Web.0.1.19\lib\net40\Xander.UI.Web.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -164,6 +170,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\istockphoto-528737408-612x612.jpg" />
+    <None Include="Resources\button-background-png-9.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\images %283%29.jpg" />
+    <None Include="Resources\this.png" />
+    <None Include="Resources\zhisButton.png" />
+    <None Include="Resources\button %2811%29.png" />
+    <None Include="Resources\zhisButton1.png" />
+    <None Include="Resources\this1.png" />
+    <None Include="Resources\jh.png" />
+    <None Include="Resources\button %2817%29.png" />
+    <None Include="Resources\button %2818%29.png" />
+    <None Include="Resources\but.png" />
+    <None Include="Resources\button %2820%29.png" />
+    <None Include="Resources\clearr.png" />
+    <None Include="Resources\im.png" />
     <Content Include="Treetog-I-PDF.ico" />
     <None Include="Resources\MPC00311832-2.jpg" />
   </ItemGroup>

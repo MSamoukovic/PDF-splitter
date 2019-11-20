@@ -118,25 +118,73 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cross+exit+remove+icon-1320161389317562876" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cross+exit+remove+icon-1320161389317562876.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Close-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="close-icon-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close-icon-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="52944-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\52944-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="zhisButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zhisButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="adobe-acrobat-pdf-file-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\adobe-acrobat-pdf-file-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="button-background-png-9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button-background-png-9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Close-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MPC00311832-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MPC00311832-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cross+exit+remove+icon-1320161389317562876" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross+exit+remove+icon-1320161389317562876.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="this" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\this.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button (17)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button (17).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="this1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\this1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="52944-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\52944-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button (18)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zhisButton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zhisButton1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="close-icon-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close-icon-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clearr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clearr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button (20)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button (20).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-528737408-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-528737408-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="but" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\but.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="im" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\im.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
