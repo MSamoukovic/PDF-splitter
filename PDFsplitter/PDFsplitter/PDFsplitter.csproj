@@ -105,6 +105,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="draganddropMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="draganddropMessageBox.Designer.cs">
+      <DependentUpon>draganddropMessageBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,10 @@
     <Compile Include="Models\pdfFile.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Windows\Forms\BunifuCheckbox.cs" />
+    <EmbeddedResource Include="draganddropMessageBox.resx">
+      <DependentUpon>draganddropMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,6 +196,53 @@
     <None Include="Resources\button %2820%29.png" />
     <None Include="Resources\clearr.png" />
     <None Include="Resources\im.png" />
+    <None Include="Resources\go-icon-16.jpg" />
+    <None Include="Resources\images1.png" />
+    <None Include="Resources\QDmP7Y.jpg" />
+    <None Include="Resources\orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-14.png" />
+    <None Include="Resources\orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-141.png" />
+    <None Include="Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14.png" />
+    <None Include="Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy.png" />
+    <None Include="Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy1.png" />
+    <None Include="Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy2.png" />
+    <None Include="Resources\orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-142.png" />
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Orange.jpg" />
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Orange1.jpg" />
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Orange2.jpg" />
+    <None Include="Resources\QDmP7Y1.jpg" />
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Orange3.jpg" />
+    <None Include="Resources\button.png" />
+    <None Include="Resources\b.png" />
+    <None Include="Resources\bb.png" />
+    <None Include="Resources\ll.jpg" />
+    <None Include="Resources\bb1.png" />
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Orange - Copy.jpg" />
+    <None Include="Resources\ll1.jpg" />
+    <None Include="Resources\logopharmalink.png" />
+    <None Include="Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy3.png" />
+    <None Include="Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy4.png" />
+    <None Include="Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-141.png" />
+    <None Include="Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-142.png" />
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Orange - Copy1.jpg" />
+    <None Include="Resources\ll2.jpg" />
+    <None Include="Resources\ll3.jpg" />
+    <None Include="Resources\ll4.jpg" />
+    <None Include="Resources\logopharmalink1.png" />
+    <None Include="Resources\ll5.jpg" />
+    <None Include="Resources\ll6.jpg" />
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Orange - Copy2.jpg" />
+    <None Include="Resources\ll7.jpg" />
+    <None Include="Resources\cloud-fileupload.png" />
+    <None Include="Resources\file-IE8Ec4PpD6.png" />
+    <None Include="Resources\1_URHYGBQMuu9UWc4zEVFGPw.gif" />
+    <None Include="Resources\tt.gif" />
+    <None Include="Resources\drag files button.jpg" />
+    <None Include="Resources\drag files button1.jpg" />
+    <None Include="Resources\cats.jpg" />
+    <None Include="Resources\cats1.jpg" />
+    <None Include="Resources\choos button.jpg" />
+    <None Include="Resources\catsii.jpg" />
+    <None Include="Resources\99.jpg" />
     <Content Include="Treetog-I-PDF.ico" />
     <None Include="Resources\MPC00311832-2.jpg" />
   </ItemGroup>

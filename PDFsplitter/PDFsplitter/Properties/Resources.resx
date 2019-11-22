@@ -118,73 +118,214 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="zhisButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\zhisButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="adobe-acrobat-pdf-file-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adobe-acrobat-pdf-file-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button-background-png-9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button-background-png-9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Close-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MPC00311832-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MPC00311832-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cross+exit+remove+icon-1320161389317562876" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cross+exit+remove+icon-1320161389317562876.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="this" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\this.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ll4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ll4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button (17)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button (17).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cloud-fileupload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cloud-fileupload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="this1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\this1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Subtle-Lines-Abstract-Gradient-Background-Orange - Copy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subtle-Lines-Abstract-Gradient-Background-Orange - Copy1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="52944-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\52944-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="this" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\this.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button (18)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-142" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-142.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QDmP7Y" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QDmP7Y.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="zhisButton1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\zhisButton1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close-icon-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close-icon-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logopharmalink1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logopharmalink1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clearr" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clearr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="QDmP7Y1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QDmP7Y1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button (20)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\button (20).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button-background-png-9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button-background-png-9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="istockphoto-528737408-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\istockphoto-528737408-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Close-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="but" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\but.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zhisButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zhisButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ll5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ll5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ll6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ll6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bb.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="choos button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\choos button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="b" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="this1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\this1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tt.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-141" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-141.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Subtle-Lines-Abstract-Gradient-Background-Orange - Copy2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subtle-Lines-Abstract-Gradient-Background-Orange - Copy2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Subtle-Lines-Abstract-Gradient-Background-Orange3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subtle-Lines-Abstract-Gradient-Background-Orange3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="drag files button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drag files button1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="button (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="close-icon-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close-icon-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ll.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cats1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cats1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="go-icon-16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\go-icon-16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Subtle-Lines-Abstract-Gradient-Background-Orange1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subtle-Lines-Abstract-Gradient-Background-Orange1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="drag files button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drag files button.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ll1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ll1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ll2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ll2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="file-IE8Ec4PpD6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\file-IE8Ec4PpD6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-141" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-141.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button (20)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button (20).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clearr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clearr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cats" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cats.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="im" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\im.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="adobe-acrobat-pdf-file-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adobe-acrobat-pdf-file-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ll7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ll7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Subtle-Lines-Abstract-Gradient-Background-Orange - Copy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subtle-Lines-Abstract-Gradient-Background-Orange - Copy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1_URHYGBQMuu9UWc4zEVFGPw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1_URHYGBQMuu9UWc4zEVFGPw.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logopharmalink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logopharmalink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="catsii" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\catsii.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="52944-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\52944-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ll3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ll3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-142" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-142.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button (18)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Subtle-Lines-Abstract-Gradient-Background-Orange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subtle-Lines-Abstract-Gradient-Background-Orange.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MPC00311832-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MPC00311832-2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="istockphoto-528737408-612x612" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-528737408-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cross+exit+remove+icon-1320161389317562876" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cross+exit+remove+icon-1320161389317562876.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Subtle-Lines-Abstract-Gradient-Background-Orange2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Subtle-Lines-Abstract-Gradient-Background-Orange2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="but" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\but.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bb1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bb1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="99" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\99.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

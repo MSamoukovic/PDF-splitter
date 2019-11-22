@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFsplitter", "PDFsplitter\PDFsplitter.csproj", "{CFD95DE2-B484-4C6E-9A5D-CD66AA052D13}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{97F2C79E-8181-4D61-8E62-A513C23CD79F}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PDF-splitter", "PDF-splitter\PDF-splitter.vdproj", "{ADB60F60-75D9-44B0-B8D6-21CA5B1562FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{CFD95DE2-B484-4C6E-9A5D-CD66AA052D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFD95DE2-B484-4C6E-9A5D-CD66AA052D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFD95DE2-B484-4C6E-9A5D-CD66AA052D13}.Release|Any CPU.Build.0 = Release|Any CPU
-		{97F2C79E-8181-4D61-8E62-A513C23CD79F}.Debug|Any CPU.ActiveCfg = Debug
-		{97F2C79E-8181-4D61-8E62-A513C23CD79F}.Release|Any CPU.ActiveCfg = Release
+		{ADB60F60-75D9-44B0-B8D6-21CA5B1562FC}.Debug|Any CPU.ActiveCfg = Debug
+		{ADB60F60-75D9-44B0-B8D6-21CA5B1562FC}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

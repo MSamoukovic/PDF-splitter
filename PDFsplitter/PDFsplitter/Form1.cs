@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Timers;
 using System.Windows.Forms;
 
 
@@ -28,9 +29,7 @@ namespace PDFsplitter
         public Form1()
         {
             InitializeComponent();
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (pathTextBox.Text == "")
@@ -56,41 +55,42 @@ namespace PDFsplitter
                         Panel panel1 = new Panel
                         {
                             BackColor = System.Drawing.Color.Gainsboro,
-                            Location = new System.Drawing.Point(0, panel.Controls.Count * 70),
+                            Location = new System.Drawing.Point(0, panel.Controls.Count * 55),
                             Name = "panel1",
                             TabIndex = 0,                       
-                            Size = new System.Drawing.Size(725, 65)
+                            Size = new System.Drawing.Size(616, 50)
 
                             };
-                            Label nameLabel = new Label
-                            {
-                                AutoSize = true,
-                                Font = new System.Drawing.Font("Microsoft Sans Serif", 12F),
-                                Location = new System.Drawing.Point(125, 15),
-                                Size = new System.Drawing.Size(61, 17),
-                                TabIndex = 0,
+                        Label nameLabel = new Label
+                        {
+                            AutoSize = true,
+                            Font = new System.Drawing.Font("Verdana", 9.75F),
+                            Location = new System.Drawing.Point(5, 10),
+                            Size = new System.Drawing.Size(61, 17),
+                            TabIndex = 0,
+                            ForeColor = Color.DarkBlue,
                                 Text = file.getName()
                             };
-                            BunifuProgressBar progressBar = new BunifuProgressBar
+                        BunifuProgressBar progressBar = new BunifuProgressBar
                             {
                                 BackColor = System.Drawing.Color.Silver,
                                 BorderRadius = 5,
-                                Location = new System.Drawing.Point(125, 38),
+                                Location = new System.Drawing.Point(5, 30),
                                 MaximumValue = file.getNumberOfPages(file.getFileName()),
                                 Name = "bunifuProgressBar1",
-                                ProgressColor = System.Drawing.Color.MediumAquamarine,
-                                Size = new System.Drawing.Size(330, 7),
+                                ProgressColor = System.Drawing.Color.DarkOrange,
+                                Size = new System.Drawing.Size(385, 7),
                                 TabIndex = 3
                             };
-                            BunifuCheckbox bunifuCheckbox1 = new BunifuCheckbox
-                            {
+                        Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox
+                        {
                                 BackColor = System.Drawing.Color.Silver,
                                 ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140))))),
                                 Checked = true,
                                 CheckedOnColor = System.Drawing.Color.Gainsboro,
-                                Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(5))),
-                                ForeColor = System.Drawing.Color.MediumAquamarine,
-                                Location = new System.Drawing.Point(470, 30),
+                                Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(5))),
+                                ForeColor = System.Drawing.Color.DarkBlue,
+                                Location = new System.Drawing.Point(420, 22),
                                 Margin = new System.Windows.Forms.Padding(0, 0, 0, 0),
                                 Name = "bunifuCheckbox1",
                                 Size = new System.Drawing.Size(20, 20),
@@ -98,14 +98,14 @@ namespace PDFsplitter
                                 Enabled = false
 
                             };
-                            Label processLabel = new Label
-                            {
-                                AutoSize = true,
-                                Font = new System.Drawing.Font("Microsoft Sans Serif", 12F),
-                                Location = new System.Drawing.Point(510, 30),
-                                Name = "nameLabel",
-                                Size = new System.Drawing.Size(61, 50),
-                                TabIndex = 0
+                        Label processLabel = new Label
+                        {
+                            AutoSize = true,
+                            Font = new System.Drawing.Font("Verdana", 9.75F),
+                            Location = new System.Drawing.Point(470, 24),
+                            Name = "nameLabel",
+                            Size = new System.Drawing.Size(61, 50),
+                            ForeColor = Color.DarkBlue
 
                             };
 
@@ -120,8 +120,7 @@ namespace PDFsplitter
 
 
                         panel1.Controls.Add(nameLabel);
-                        panel.Controls.Add(panel1);
-
+                       panel.Controls.Add(panel1);
 
                             panel1.Controls.Add(progressBar);
 
@@ -175,7 +174,7 @@ namespace PDFsplitter
                         {
                             for (int count = 0; count < mc.Count- mc.Count+1; count++)
                             {                           
-                                string newPdfFileName = string.Format(pdfFileName + "{0}", pageNameSuffix + " " + mc[count].Value);
+                                string newPdfFileName = string.Format(mc[count].Value);
                                 splitAndSave(pdfFilePath, outputPath, pageNumber, interval, newPdfFileName);                                                            
                             }
                         }
@@ -220,8 +219,7 @@ namespace PDFsplitter
             {
                 string folderName = folderBrowserDialog1.SelectedPath;
                 pathTextBox.Text = folderName;
-                pathTextBox.ForeColor = Color.Black;
-                pathTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 4F);
+                
             }
         }
         private void clearButton_Click(object sender, EventArgs e)
@@ -236,72 +234,80 @@ namespace PDFsplitter
                 messageBoxForm messageBoxForm = new messageBoxForm();
                 messageBoxForm.ShowDialog();
             }
+          
             else
             {
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
                 foreach (string item in files)
-                {
-                    pdfFile file = new pdfFile(item);
-                    pdfFiles.Add(file);
-
-                    Panel panel1 = new Panel
+                {                   
+                    if (System.IO.Path.GetExtension(item)!=".pdf")
                     {
-                        BackColor = System.Drawing.Color.Gainsboro,
-                        Location = new System.Drawing.Point(0, panel.Controls.Count * 70),
-                        Name = "panel1",
-                        TabIndex = 0,
-                        Size = new System.Drawing.Size(725, 65)
-
-                    };
-                    Label nameLabel = new Label
+                         draganddropMessageBox draganddropMessageBox = new draganddropMessageBox();
+                         draganddropMessageBox.ShowDialog();
+                    }
+                    else
                     {
-                        AutoSize = true,
-                        Font = new System.Drawing.Font("Microsoft Sans Serif", 12F),
-                        Location = new System.Drawing.Point(125, 15),
-                        Size = new System.Drawing.Size(61, 17),
-                        TabIndex = 0,
-                        Text = file.getName()
-                    };
-                    BunifuProgressBar progressBar = new BunifuProgressBar
-                    {
-                        BackColor = System.Drawing.Color.Silver,
-                        BorderRadius = 5,
-                        Location = new System.Drawing.Point(125, 38),
-                        MaximumValue = file.getNumberOfPages(file.getFileName()),
-                        Name = "bunifuProgressBar1",
-                        ProgressColor = System.Drawing.Color.MediumAquamarine,
-                        Size = new System.Drawing.Size(330, 7),
-                        TabIndex = 3
-                    };
-                    BunifuCheckbox bunifuCheckbox1 = new BunifuCheckbox
-                    {
-                        BackColor = System.Drawing.Color.Silver,
-                        ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140))))),
-                        Checked = true,
-                        CheckedOnColor = System.Drawing.Color.Gainsboro,
-                        Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(5))),
-                        ForeColor = System.Drawing.Color.MediumAquamarine,
-                        Location = new System.Drawing.Point(470, 30),
-                        Margin = new System.Windows.Forms.Padding(0, 0, 0, 0),
-                        Name = "bunifuCheckbox1",
-                        Size = new System.Drawing.Size(20, 20),
-                        TabIndex = 0,
-                        Enabled = false
+                        pdfFile file = new pdfFile(item);
+                        pdfFiles.Add(file);
 
-                    };
-                    Label processLabel = new Label
-                    {
-                        AutoSize = true,
-                        Font = new System.Drawing.Font("Microsoft Sans Serif", 12F),
-                        Location = new System.Drawing.Point(510, 30),
-                        Name = "nameLabel",
-                        Size = new System.Drawing.Size(61, 50),
-                        TabIndex = 0
+                        Panel panel1 = new Panel
+                        {
+                            BackColor = System.Drawing.Color.Gainsboro,
+                            Location = new System.Drawing.Point(0, panel.Controls.Count * 55),
+                            Name = "panel1",
+                            TabIndex = 0,
+                            Size = new System.Drawing.Size(616, 50)
 
-                    };
+                        };
+                        Label nameLabel = new Label
+                        {
+                            AutoSize = true,
+                            Font = new System.Drawing.Font("Verdana", 9.75F),
+                            Location = new System.Drawing.Point(5, 10),
+                            Size = new System.Drawing.Size(61, 17),
+                            TabIndex = 0,
+                            ForeColor = Color.DarkBlue,
+                            Text = file.getName()
+                        };
+                        BunifuProgressBar progressBar = new BunifuProgressBar
+                        {
+                            BackColor = System.Drawing.Color.Silver,
+                            BorderRadius = 5,
+                            Location = new System.Drawing.Point(5, 30),
+                            MaximumValue = file.getNumberOfPages(file.getFileName()),
+                            Name = "bunifuProgressBar1",
+                            ProgressColor = System.Drawing.Color.DarkOrange,
+                            Size = new System.Drawing.Size(385, 7),
+                            TabIndex = 3
+                        };
+                        Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox
+                        {
+                            BackColor = System.Drawing.Color.Silver,
+                            ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140))))),
+                            Checked = true,
+                            CheckedOnColor = System.Drawing.Color.Gainsboro,
+                            Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(5))),
+                            ForeColor = System.Drawing.Color.DarkBlue,
+                            Location = new System.Drawing.Point(420, 22),
+                            Margin = new System.Windows.Forms.Padding(0, 0, 0, 0),
+                            Name = "bunifuCheckbox1",
+                            Size = new System.Drawing.Size(20, 20),
+                            TabIndex = 0,
+                            Enabled = false
 
-                    if (file.getNumberOfPages(file.getFileName()) == 1)
+                        };
+                        Label processLabel = new Label
+                        {
+                            AutoSize = true,
+                            Font = new System.Drawing.Font("Verdana", 9.75F),
+                            Location = new System.Drawing.Point(470, 24),
+                            Name = "nameLabel",
+                            Size = new System.Drawing.Size(61, 50),
+                            ForeColor = Color.DarkBlue
+
+                        };
+                        if (file.getNumberOfPages(file.getFileName()) == 1)
                     {
                         processLabel.Text = file.getNumberOfPages(file.getFileName()).ToString() + " page";
                     }
@@ -330,6 +336,7 @@ namespace PDFsplitter
                             panel1.Controls.Add(processLabel);
                         }
 
+                    }
                     }
                 }
                 //  renderList();
@@ -363,7 +370,7 @@ namespace PDFsplitter
                         {
                             for (int count = 0; count < mc.Count - mc.Count + 1; count++)
                             {
-                                string newPdfFileName = string.Format(pdfFileName + "{0}", pageNameSuffix + " " + mc[count].Value);
+                                string newPdfFileName = string.Format(mc[count].Value);
                                 splitAndSave(pdfFilePath, outputPath, pageNumber, interval, newPdfFileName);
                             }
                         }
@@ -384,6 +391,18 @@ namespace PDFsplitter
 
         }
 
-       
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (pathTextBox.Text == "")
+            {
+                messageBoxForm messageBoxForm = new messageBoxForm();
+                messageBoxForm.ShowDialog();
+            }
+            else
+            {
+                System.Diagnostics.Process.Start(pathTextBox.Text);
+            }
+        }
+
     }
 }

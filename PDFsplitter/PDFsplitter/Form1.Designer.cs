@@ -29,43 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pathTextBox = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pathTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonColorButton1 = new ComponentFactory.Krypton.Toolkit.KryptonColorButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.clearButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pathTextBox
-            // 
-            this.pathTextBox.BackColor = System.Drawing.Color.White;
-            this.pathTextBox.CustomForeColor = true;
-            this.pathTextBox.ForeColor = System.Drawing.Color.Black;
-            this.pathTextBox.Location = new System.Drawing.Point(270, 41);
-            this.pathTextBox.Name = "pathTextBox";
-            this.pathTextBox.ReadOnly = true;
-            this.pathTextBox.Size = new System.Drawing.Size(725, 23);
-            this.pathTextBox.TabIndex = 0;
-            this.pathTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(267, 21);
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label1.Location = new System.Drawing.Point(198, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 17);
+            this.label1.Size = new System.Drawing.Size(194, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Select a destination folder :";
             // 
@@ -75,98 +58,75 @@
             this.panel.AutoScroll = true;
             this.panel.BackColor = System.Drawing.Color.White;
             this.panel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel.Location = new System.Drawing.Point(270, 78);
-            this.panel.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.panel.Location = new System.Drawing.Point(201, 143);
+            this.panel.Margin = new System.Windows.Forms.Padding(0);
             this.panel.Name = "panel";
-            this.panel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel.Size = new System.Drawing.Size(742, 371);
+            this.panel.Size = new System.Drawing.Size(644, 349);
             this.panel.TabIndex = 0;
             // 
-            // panel1
+            // pathTextBox
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(246, 464);
-            this.panel1.TabIndex = 5;
+            this.pathTextBox.BackColor = System.Drawing.Color.Gainsboro;
+            this.pathTextBox.Location = new System.Drawing.Point(201, 106);
+            this.pathTextBox.Name = "pathTextBox";
+            this.pathTextBox.ReadOnly = true;
+            this.pathTextBox.Size = new System.Drawing.Size(616, 23);
+            this.pathTextBox.TabIndex = 27;
+            this.pathTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
             // 
-            // panel2
+            // button3
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.panel2.Location = new System.Drawing.Point(273, 572);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(863, 189);
-            this.panel2.TabIndex = 15;
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.button3.ForeColor = System.Drawing.Color.DarkBlue;
+            this.button3.Location = new System.Drawing.Point(731, 495);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(114, 24);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "Clear the list";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(43, 22);
+            this.pictureBox3.Location = new System.Drawing.Point(419, 12);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(171, 159);
+            this.pictureBox3.Size = new System.Drawing.Size(223, 56);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // kryptonButton1
+            // button4
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.TabIndex = 0;
+            this.button4.AllowDrop = true;
+            this.button4.BackgroundImage = global::PDFsplitter.Properties.Resources._99;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button4.Location = new System.Drawing.Point(1, 525);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(1048, 217);
+            this.button4.TabIndex = 25;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button1_Click);
+            this.button4.DragDrop += new System.Windows.Forms.DragEventHandler(this.button1_DragDrop_1);
+            this.button4.DragEnter += new System.Windows.Forms.DragEventHandler(this.button1_DragEnter_1);
             // 
-            // kryptonColorButton1
+            // pictureBox1
             // 
-            this.kryptonColorButton1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonColorButton1.Name = "kryptonColorButton1";
-            this.kryptonColorButton1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.panel3.Location = new System.Drawing.Point(1029, -1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(133, 652);
-            this.panel3.TabIndex = 18;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.ImeMode = System.Windows.Forms.ImeMode.Katakana;
-            this.panel4.Location = new System.Drawing.Point(273, 572);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(863, 189);
-            this.panel4.TabIndex = 15;
-            // 
-            // clearButton
-            // 
-            this.clearButton.BackgroundImage = global::PDFsplitter.Properties.Resources.clearr;
-            this.clearButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clearButton.Location = new System.Drawing.Point(873, 462);
-            this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(122, 35);
-            this.clearButton.TabIndex = 20;
-            this.clearButton.UseVisualStyleBackColor = true;
-            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
-            // 
-            // button2
-            // 
-            this.button2.AllowDrop = true;
-            this.button2.BackgroundImage = global::PDFsplitter.Properties.Resources.but;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(380, 462);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(487, 129);
-            this.button2.TabIndex = 19;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
-            this.button2.DragDrop += new System.Windows.Forms.DragEventHandler(this.button1_DragDrop_1);
-            this.button2.DragEnter += new System.Windows.Forms.DragEventHandler(this.button1_DragEnter_1);
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(816, 106);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
@@ -175,42 +135,37 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1237, 654);
-            this.Controls.Add(this.clearButton);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label1);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1044, 740);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.pathTextBox);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDF-splitter";
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private MetroFramework.Controls.MetroTextBox pathTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonColorButton kryptonColorButton1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button3;
+        private MetroFramework.Controls.MetroTextBox pathTextBox;
+        private System.Windows.Forms.Button button4;
     }
 }
 

@@ -63,9 +63,29 @@ namespace PDFsplitter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1_URHYGBQMuu9UWc4zEVFGPw {
+            get {
+                object obj = ResourceManager.GetObject("1_URHYGBQMuu9UWc4zEVFGPw", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _52944_200 {
             get {
                 object obj = ResourceManager.GetObject("52944-200", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _99 {
+            get {
+                object obj = ResourceManager.GetObject("99", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +113,49 @@ namespace PDFsplitter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap b {
+            get {
+                object obj = ResourceManager.GetObject("b", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bb {
+            get {
+                object obj = ResourceManager.GetObject("bb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bb1 {
+            get {
+                object obj = ResourceManager.GetObject("bb1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap but {
             get {
                 object obj = ResourceManager.GetObject("but", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap button {
+            get {
+                object obj = ResourceManager.GetObject("button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +213,46 @@ namespace PDFsplitter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cats {
+            get {
+                object obj = ResourceManager.GetObject("cats", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cats1 {
+            get {
+                object obj = ResourceManager.GetObject("cats1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap catsii {
+            get {
+                object obj = ResourceManager.GetObject("catsii", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap choos_button {
+            get {
+                object obj = ResourceManager.GetObject("choos button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap clearr {
             get {
                 object obj = ResourceManager.GetObject("clearr", resourceCulture);
@@ -183,6 +283,16 @@ namespace PDFsplitter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cloud_fileupload {
+            get {
+                object obj = ResourceManager.GetObject("cloud-fileupload", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cross_exit_remove_icon_1320161389317562876 {
             get {
                 object obj = ResourceManager.GetObject("cross+exit+remove+icon-1320161389317562876", resourceCulture);
@@ -196,6 +306,46 @@ namespace PDFsplitter.Properties {
         internal static System.Drawing.Bitmap download {
             get {
                 object obj = ResourceManager.GetObject("download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drag_files_button {
+            get {
+                object obj = ResourceManager.GetObject("drag files button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drag_files_button1 {
+            get {
+                object obj = ResourceManager.GetObject("drag files button1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap file_IE8Ec4PpD6 {
+            get {
+                object obj = ResourceManager.GetObject("file-IE8Ec4PpD6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap go_icon_16 {
+            get {
+                object obj = ResourceManager.GetObject("go-icon-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +383,16 @@ namespace PDFsplitter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images1 {
+            get {
+                object obj = ResourceManager.GetObject("images1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap istockphoto_528737408_612x612 {
             get {
                 object obj = ResourceManager.GetObject("istockphoto-528737408-612x612", resourceCulture);
@@ -253,6 +413,106 @@ namespace PDFsplitter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ll {
+            get {
+                object obj = ResourceManager.GetObject("ll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ll1 {
+            get {
+                object obj = ResourceManager.GetObject("ll1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ll2 {
+            get {
+                object obj = ResourceManager.GetObject("ll2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ll3 {
+            get {
+                object obj = ResourceManager.GetObject("ll3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ll4 {
+            get {
+                object obj = ResourceManager.GetObject("ll4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ll5 {
+            get {
+                object obj = ResourceManager.GetObject("ll5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ll6 {
+            get {
+                object obj = ResourceManager.GetObject("ll6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ll7 {
+            get {
+                object obj = ResourceManager.GetObject("ll7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logopharmalink {
+            get {
+                object obj = ResourceManager.GetObject("logopharmalink", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logopharmalink1 {
+            get {
+                object obj = ResourceManager.GetObject("logopharmalink1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MPC00311832_2 {
             get {
                 object obj = ResourceManager.GetObject("MPC00311832-2", resourceCulture);
@@ -263,9 +523,219 @@ namespace PDFsplitter.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap orange_gradient_yellow_linear_1920x1080_c2_ffffe0_ff8c00_a_315_f_14 {
+            get {
+                object obj = ResourceManager.GetObject("orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange_gradient_yellow_linear_1920x1080_c2_ffffe0_ff8c00_a_315_f_14___Copy {
+            get {
+                object obj = ResourceManager.GetObject("orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange_gradient_yellow_linear_1920x1080_c2_ffffe0_ff8c00_a_315_f_14___Copy1 {
+            get {
+                object obj = ResourceManager.GetObject("orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange_gradient_yellow_linear_1920x1080_c2_ffffe0_ff8c00_a_315_f_14___Copy2 {
+            get {
+                object obj = ResourceManager.GetObject("orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange_gradient_yellow_linear_1920x1080_c2_ffffe0_ff8c00_a_315_f_14___Copy3 {
+            get {
+                object obj = ResourceManager.GetObject("orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange_gradient_yellow_linear_1920x1080_c2_ffffe0_ff8c00_a_315_f_14___Copy4 {
+            get {
+                object obj = ResourceManager.GetObject("orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-14 - Copy4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange_gradient_yellow_linear_1920x1080_c2_ffffe0_ff8c00_a_315_f_141 {
+            get {
+                object obj = ResourceManager.GetObject("orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-141", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange_gradient_yellow_linear_1920x1080_c2_ffffe0_ff8c00_a_315_f_142 {
+            get {
+                object obj = ResourceManager.GetObject("orange-gradient-yellow-linear-1920x1080-c2-ffffe0-ff8c00-a-315-f-142", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange_yellow_linear_gradient_1920x1080_c2_fc6029_fcf829_a_60_f_14 {
+            get {
+                object obj = ResourceManager.GetObject("orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-14", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange_yellow_linear_gradient_1920x1080_c2_fc6029_fcf829_a_60_f_141 {
+            get {
+                object obj = ResourceManager.GetObject("orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-141", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange_yellow_linear_gradient_1920x1080_c2_fc6029_fcf829_a_60_f_142 {
+            get {
+                object obj = ResourceManager.GetObject("orange-yellow-linear-gradient-1920x1080-c2-fc6029-fcf829-a-60-f-142", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QDmP7Y {
+            get {
+                object obj = ResourceManager.GetObject("QDmP7Y", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap QDmP7Y1 {
+            get {
+                object obj = ResourceManager.GetObject("QDmP7Y1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtle_Lines_Abstract_Gradient_Background_Orange {
+            get {
+                object obj = ResourceManager.GetObject("Subtle-Lines-Abstract-Gradient-Background-Orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtle_Lines_Abstract_Gradient_Background_Orange___Copy {
+            get {
+                object obj = ResourceManager.GetObject("Subtle-Lines-Abstract-Gradient-Background-Orange - Copy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtle_Lines_Abstract_Gradient_Background_Orange___Copy1 {
+            get {
+                object obj = ResourceManager.GetObject("Subtle-Lines-Abstract-Gradient-Background-Orange - Copy1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtle_Lines_Abstract_Gradient_Background_Orange___Copy2 {
+            get {
+                object obj = ResourceManager.GetObject("Subtle-Lines-Abstract-Gradient-Background-Orange - Copy2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtle_Lines_Abstract_Gradient_Background_Orange1 {
+            get {
+                object obj = ResourceManager.GetObject("Subtle-Lines-Abstract-Gradient-Background-Orange1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtle_Lines_Abstract_Gradient_Background_Orange2 {
+            get {
+                object obj = ResourceManager.GetObject("Subtle-Lines-Abstract-Gradient-Background-Orange2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Subtle_Lines_Abstract_Gradient_Background_Orange3 {
+            get {
+                object obj = ResourceManager.GetObject("Subtle-Lines-Abstract-Gradient-Background-Orange3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap this1 {
             get {
                 object obj = ResourceManager.GetObject("this1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tt {
+            get {
+                object obj = ResourceManager.GetObject("tt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
