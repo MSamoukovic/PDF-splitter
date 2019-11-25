@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.panel = new System.Windows.Forms.Panel();
             this.pathTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,18 +52,6 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Select a destination folder :";
             // 
-            // panel
-            // 
-            this.panel.AllowDrop = true;
-            this.panel.AutoScroll = true;
-            this.panel.BackColor = System.Drawing.Color.White;
-            this.panel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel.Location = new System.Drawing.Point(201, 143);
-            this.panel.Margin = new System.Windows.Forms.Padding(0);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(644, 349);
-            this.panel.TabIndex = 0;
-            // 
             // pathTextBox
             // 
             this.pathTextBox.BackColor = System.Drawing.Color.Gainsboro;
@@ -74,19 +62,19 @@
             this.pathTextBox.TabIndex = 27;
             this.pathTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
             // 
-            // button3
+            // clearButton
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.button3.ForeColor = System.Drawing.Color.DarkBlue;
-            this.button3.Location = new System.Drawing.Point(731, 495);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 24);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Clear the list";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.clearButton_Click);
+            this.clearButton.BackColor = System.Drawing.Color.White;
+            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.clearButton.ForeColor = System.Drawing.Color.DarkBlue;
+            this.clearButton.Location = new System.Drawing.Point(731, 495);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(114, 24);
+            this.clearButton.TabIndex = 25;
+            this.clearButton.Text = "Clear the list";
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // pictureBox3
             // 
@@ -128,6 +116,15 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // panel
+            // 
+            this.panel.AutoScroll = true;
+            this.panel.BackColor = System.Drawing.Color.White;
+            this.panel.Location = new System.Drawing.Point(201, 143);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(644, 349);
+            this.panel.TabIndex = 28;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,13 +134,13 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 740);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.panel);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -160,12 +157,12 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button clearButton;
         private MetroFramework.Controls.MetroTextBox pathTextBox;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.FlowLayoutPanel panel;
     }
 }
 
