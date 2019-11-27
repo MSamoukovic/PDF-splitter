@@ -13,17 +13,16 @@ namespace PDFsplitter.Models
 {
     public partial class PDFViewItem : UserControl
     {
+
         public PDFViewItem()
         {
             InitializeComponent();
-
         }
 
         #region Properties
 
         private string pdfName;
         private int pdfPages;
-
 
         public string PDFName
         {
@@ -43,44 +42,25 @@ namespace PDFsplitter.Models
                 return " page";
             else
                 return " pages";
-
         }
-   
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+
+        public void nn() 
         {
-           // bunifuProgressBar1.MaximumValue = PDFPages;
-            for (int i = 1; i < 101; i++)
-            {
-                Thread.Sleep(80);
-                //  backgroundWorker1.ReportProgress(i);
-                backgroundWorker1.ReportProgress(i);
-
-            }
+          itemNameLabel.Text = "MAJA";
         }
-
-        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+ 
+        public void progressValue(int pageNumber)
         {
-            //bunifuProgressBar1.Value = e.ProgressPercentage / PDFPages * 100;
-            bunifuProgressBar1.Value = e.ProgressPercentage;
-            if (e.ProgressPercentage != 100)
-                label1.Text = e.ProgressPercentage.ToString() + "%";
-            else
-                label1.Text = "";
+            int percent = pageNumber * 100;
+            double m = percent / PDFPages;
+            progressBar.Value = Convert.ToInt32(m);
+            Console.WriteLine(progressBar.Value);
 
-        }
+            percentLabel.Text = progressBar.Value.ToString() + " %";
 
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            bunifuCheckbox1.Checked = true;
-            itemPagesLabel.Visible = true;
-
-        }
+            if (progressBar.Value == progressBar.MaximumValue)
+            checkbox.Checked = true;
+        }           
         #endregion
-
-        private void PDFViewItem_Load(object sender, EventArgs e)
-        {
-            backgroundWorker1.RunWorkerAsync();
-
-        }
     }
 }

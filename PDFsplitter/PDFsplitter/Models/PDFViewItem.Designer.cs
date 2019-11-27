@@ -28,51 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.itemPagesLabel = new System.Windows.Forms.Label();
-            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuProgressBar1 = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.checkbox = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.progressBar = new Bunifu.Framework.UI.BunifuProgressBar();
             this.itemNameLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.percentLabel = new System.Windows.Forms.Label();
+            this.itemPagesLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // itemPagesLabel
+            // checkbox
             // 
-            this.itemPagesLabel.AutoSize = true;
-            this.itemPagesLabel.BackColor = System.Drawing.Color.Gainsboro;
-            this.itemPagesLabel.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.itemPagesLabel.ForeColor = System.Drawing.Color.DarkBlue;
-            this.itemPagesLabel.Location = new System.Drawing.Point(504, 24);
-            this.itemPagesLabel.Name = "itemPagesLabel";
-            this.itemPagesLabel.Size = new System.Drawing.Size(46, 16);
-            this.itemPagesLabel.TabIndex = 1;
-            this.itemPagesLabel.Text = "label2";
-            this.itemPagesLabel.Visible = false;
+            this.checkbox.BackColor = System.Drawing.Color.Gainsboro;
+            this.checkbox.ChechedOffColor = System.Drawing.Color.Gainsboro;
+            this.checkbox.Checked = false;
+            this.checkbox.CheckedOnColor = System.Drawing.Color.Gainsboro;
+            this.checkbox.Enabled = false;
+            this.checkbox.ForeColor = System.Drawing.Color.DarkBlue;
+            this.checkbox.Location = new System.Drawing.Point(431, 20);
+            this.checkbox.Name = "checkbox";
+            this.checkbox.Size = new System.Drawing.Size(20, 20);
+            this.checkbox.TabIndex = 2;
             // 
-            // bunifuCheckbox1
+            // progressBar
             // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCheckbox1.Checked = false;
-            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCheckbox1.Enabled = false;
-            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(431, 20);
-            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
-            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox1.TabIndex = 2;
-            // 
-            // bunifuProgressBar1
-            // 
-            this.bunifuProgressBar1.BackColor = System.Drawing.Color.Silver;
-            this.bunifuProgressBar1.BorderRadius = 5;
-            this.bunifuProgressBar1.Location = new System.Drawing.Point(5, 30);
-            this.bunifuProgressBar1.MaximumValue = 100;
-            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
-            this.bunifuProgressBar1.ProgressColor = System.Drawing.Color.DarkOrange;
-            this.bunifuProgressBar1.Size = new System.Drawing.Size(385, 7);
-            this.bunifuProgressBar1.TabIndex = 3;
-            this.bunifuProgressBar1.Value = 0;
+            this.progressBar.BackColor = System.Drawing.Color.Silver;
+            this.progressBar.BorderRadius = 5;
+            this.progressBar.Location = new System.Drawing.Point(5, 30);
+            this.progressBar.MaximumValue = 100;
+            this.progressBar.Name = "progressBar";
+            this.progressBar.ProgressColor = System.Drawing.Color.DarkOrange;
+            this.progressBar.Size = new System.Drawing.Size(385, 7);
+            this.progressBar.TabIndex = 3;
+            this.progressBar.Value = 0;
             // 
             // itemNameLabel
             // 
@@ -80,43 +66,46 @@
             this.itemNameLabel.BackColor = System.Drawing.Color.Gainsboro;
             this.itemNameLabel.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.itemNameLabel.ForeColor = System.Drawing.Color.DarkBlue;
-            this.itemNameLabel.Location = new System.Drawing.Point(13, 9);
+            this.itemNameLabel.Location = new System.Drawing.Point(3, 11);
             this.itemNameLabel.Name = "itemNameLabel";
             this.itemNameLabel.Size = new System.Drawing.Size(46, 16);
             this.itemNameLabel.TabIndex = 4;
             this.itemNameLabel.Text = "label1";
             // 
-            // label1
+            // percentLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(416, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.percentLabel.AutoSize = true;
+            this.percentLabel.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.percentLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.percentLabel.Location = new System.Drawing.Point(418, 11);
+            this.percentLabel.Name = "percentLabel";
+            this.percentLabel.Size = new System.Drawing.Size(46, 16);
+            this.percentLabel.TabIndex = 5;
+            this.percentLabel.Text = "label1";
             // 
-            // backgroundWorker1
+            // itemPagesLabel
             // 
-            this.backgroundWorker1.WorkerReportsProgress = true;
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            this.itemPagesLabel.AutoSize = true;
+            this.itemPagesLabel.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemPagesLabel.ForeColor = System.Drawing.Color.DarkBlue;
+            this.itemPagesLabel.Location = new System.Drawing.Point(515, 21);
+            this.itemPagesLabel.Name = "itemPagesLabel";
+            this.itemPagesLabel.Size = new System.Drawing.Size(109, 16);
+            this.itemPagesLabel.TabIndex = 6;
+            this.itemPagesLabel.Text = "itemPagesLabel";
             // 
             // PDFViewItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.itemNameLabel);
-            this.Controls.Add(this.bunifuProgressBar1);
-            this.Controls.Add(this.bunifuCheckbox1);
             this.Controls.Add(this.itemPagesLabel);
+            this.Controls.Add(this.percentLabel);
+            this.Controls.Add(this.itemNameLabel);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.checkbox);
             this.Name = "PDFViewItem";
             this.Size = new System.Drawing.Size(616, 50);
-            this.Load += new System.EventHandler(this.PDFViewItem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,12 +113,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.Label itemPagesLabel;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
-        private Bunifu.Framework.UI.BunifuProgressBar bunifuProgressBar1;
+      //  private System.Windows.Forms.Label nameLabel;
+        private Bunifu.Framework.UI.BunifuCheckbox checkbox;
+        private Bunifu.Framework.UI.BunifuProgressBar progressBar;
         private System.Windows.Forms.Label itemNameLabel;
-        private System.Windows.Forms.Label label1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label percentLabel;
+        private System.Windows.Forms.Label itemPagesLabel;
     }
 }

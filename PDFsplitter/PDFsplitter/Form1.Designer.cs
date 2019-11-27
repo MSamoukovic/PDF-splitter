@@ -33,7 +33,7 @@
             this.pathTextBox = new MetroFramework.Controls.MetroTextBox();
             this.clearButton = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.chooseFileButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -86,22 +86,22 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // button4
+            // chooseFileButton
             // 
-            this.button4.AllowDrop = true;
-            this.button4.BackgroundImage = global::PDFsplitter.Properties.Resources._99;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button4.Location = new System.Drawing.Point(1, 525);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(1048, 217);
-            this.button4.TabIndex = 25;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button1_Click);
-            this.button4.DragDrop += new System.Windows.Forms.DragEventHandler(this.button1_DragDrop_1);
-            this.button4.DragEnter += new System.Windows.Forms.DragEventHandler(this.button1_DragEnter_1);
+            this.chooseFileButton.AllowDrop = true;
+            this.chooseFileButton.BackgroundImage = global::PDFsplitter.Properties.Resources._99;
+            this.chooseFileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.chooseFileButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chooseFileButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chooseFileButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.chooseFileButton.Location = new System.Drawing.Point(1, 525);
+            this.chooseFileButton.Name = "chooseFileButton";
+            this.chooseFileButton.Size = new System.Drawing.Size(1048, 217);
+            this.chooseFileButton.TabIndex = 25;
+            this.chooseFileButton.UseVisualStyleBackColor = true;
+            this.chooseFileButton.Click += new System.EventHandler(this.button1_Click);
+            this.chooseFileButton.DragDrop += new System.Windows.Forms.DragEventHandler(this.button1_DragDrop_1);
+            this.chooseFileButton.DragEnter += new System.Windows.Forms.DragEventHandler(this.button1_DragEnter_1);
             // 
             // pictureBox1
             // 
@@ -120,7 +120,7 @@
             // 
             this.panel.AutoScroll = true;
             this.panel.BackColor = System.Drawing.Color.White;
-            this.panel.Location = new System.Drawing.Point(201, 143);
+            this.panel.Location = new System.Drawing.Point(201, 140);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(644, 349);
             this.panel.TabIndex = 28;
@@ -137,7 +137,7 @@
             this.Controls.Add(this.panel);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.chooseFileButton);
             this.Controls.Add(this.pathTextBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -161,7 +161,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button clearButton;
         private MetroFramework.Controls.MetroTextBox pathTextBox;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button chooseFileButton;
         private System.Windows.Forms.FlowLayoutPanel panel;
     }
 }

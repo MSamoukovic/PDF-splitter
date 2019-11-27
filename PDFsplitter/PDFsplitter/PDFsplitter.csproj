@@ -130,7 +130,6 @@
     <Compile Include="Models\PDFViewItem.Designer.cs">
       <DependentUpon>PDFViewItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\ViewItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="System\Windows\Forms\BunifuCheckbox.cs" />
