@@ -99,9 +99,9 @@
             this.chooseFileButton.Size = new System.Drawing.Size(1048, 217);
             this.chooseFileButton.TabIndex = 25;
             this.chooseFileButton.UseVisualStyleBackColor = true;
-            this.chooseFileButton.Click += new System.EventHandler(this.button1_Click);
-            this.chooseFileButton.DragDrop += new System.Windows.Forms.DragEventHandler(this.button1_DragDrop_1);
-            this.chooseFileButton.DragEnter += new System.Windows.Forms.DragEventHandler(this.button1_DragEnter_1);
+            this.chooseFileButton.Click += new System.EventHandler(this.chooseFileButton_Click);
+            this.chooseFileButton.DragDrop += new System.Windows.Forms.DragEventHandler(this.chooseFileButton_DragDrop_1);
+            this.chooseFileButton.DragEnter += new System.Windows.Forms.DragEventHandler(this.chooseFileButton_DragEnter_1);
             // 
             // pictureBox1
             // 
@@ -121,6 +121,7 @@
             this.panel.AutoScroll = true;
             this.panel.BackColor = System.Drawing.Color.White;
             this.panel.Location = new System.Drawing.Point(201, 140);
+            this.panel.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(644, 349);
             this.panel.TabIndex = 28;

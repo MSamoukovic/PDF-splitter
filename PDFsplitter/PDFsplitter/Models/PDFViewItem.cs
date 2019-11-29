@@ -13,12 +13,19 @@ namespace PDFsplitter.Models
 {
     public partial class PDFViewItem : UserControl
     {
-
-        public PDFViewItem()
+        public PDFViewItem(string pdfName, int pdfPages)
         {
-            InitializeComponent();
-        }
 
+            InitializeComponent();
+
+            PDFName = pdfName;
+            PDFPages = pdfPages;
+            // this.pdfName = pdfName;
+            // this.pdfPages = pdfPages;
+            // this.itemNameLabel.Text = pdfName;
+            // this.itemPagesLabel.Text = pdfPages.ToString();
+
+        }
         #region Properties
 
         private string pdfName;
@@ -29,6 +36,7 @@ namespace PDFsplitter.Models
             get { return pdfName; }
             set { pdfName = value; itemNameLabel.Text = value; }
         }
+
 
         public int PDFPages
         {
@@ -43,24 +51,18 @@ namespace PDFsplitter.Models
             else
                 return " pages";
         }
-
-        public void nn() 
-        {
-          itemNameLabel.Text = "MAJA";
-        }
- 
         public void progressValue(int pageNumber)
         {
             int percent = pageNumber * 100;
             double m = percent / PDFPages;
             progressBar.Value = Convert.ToInt32(m);
-            Console.WriteLine(progressBar.Value);
+            // Console.WriteLine(progressBar.Value);
 
-            percentLabel.Text = progressBar.Value.ToString() + " %";
-
+            // percentLabel.Text = progressBar.Value.ToString() + " %";
             if (progressBar.Value == progressBar.MaximumValue)
-            checkbox.Checked = true;
-        }           
+                checkbox.Checked = true;
+        }
+
         #endregion
     }
 }

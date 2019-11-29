@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(draganddropMessageBox));
             this.label1 = new System.Windows.Forms.Label();
-            this.okButton = new Bunifu.Framework.UI.BunifuTileButton();
+         //   this.okButton = new Bunifu.Framework.UI.BunifuTileButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -100,11 +100,10 @@
             this.PerformLayout();
 
         }
-
         #endregion
-
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuTileButton okButton;
+        private ns1.BunifuTileButton okButton;
         private System.Windows.Forms.Label label1;
+
     }
 }
