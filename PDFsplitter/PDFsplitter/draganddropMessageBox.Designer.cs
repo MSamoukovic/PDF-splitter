@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(draganddropMessageBox));
             this.label1 = new System.Windows.Forms.Label();
+         //   this.okButton = new Bunifu.Framework.UI.BunifuTileButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.okButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +46,28 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Please select only pdf file !";
             // 
+            // okButton
+            // 
+            this.okButton.BackColor = System.Drawing.Color.Silver;
+            this.okButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.okButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.okButton.color = System.Drawing.Color.Silver;
+            this.okButton.colorActive = System.Drawing.Color.Silver;
+            this.okButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.okButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.okButton.ForeColor = System.Drawing.Color.Black;
+            this.okButton.Image = ((System.Drawing.Image)(resources.GetObject("okButton.Image")));
+            this.okButton.ImagePosition = 0;
+            this.okButton.ImageZoom = 0;
+            this.okButton.LabelPosition = 31;
+            this.okButton.LabelText = "OK";
+            this.okButton.Location = new System.Drawing.Point(156, 124);
+            this.okButton.Margin = new System.Windows.Forms.Padding(6);
+            this.okButton.Name = "okButton";
+            this.okButton.Size = new System.Drawing.Size(115, 39);
+            this.okButton.TabIndex = 3;
+            this.okButton.Click += new System.EventHandler(this.okButton_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::PDFsplitter.Properties.Resources.logopharmalink1;
@@ -56,17 +78,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // okButton
-            // 
-            this.okButton.BackColor = System.Drawing.Color.Silver;
-            this.okButton.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.okButton.Location = new System.Drawing.Point(169, 128);
-            this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(90, 41);
-            this.okButton.TabIndex = 5;
-            this.okButton.Text = "OK";
-            this.okButton.UseVisualStyleBackColor = false;
-            // 
             // draganddropMessageBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -74,8 +85,8 @@
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(413, 206);
-            this.Controls.Add(this.okButton);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.okButton);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -89,11 +100,10 @@
             this.PerformLayout();
 
         }
-
         #endregion
-
         private System.Windows.Forms.PictureBox pictureBox1;
+        private ns1.BunifuTileButton okButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button okButton;
+
     }
 }
