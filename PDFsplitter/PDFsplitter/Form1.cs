@@ -1,5 +1,4 @@
-﻿using Bunifu.Framework.UI;
-using iTextSharp.text;
+﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
 using PDFsplitter.Models;
@@ -15,20 +14,12 @@ using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Forms;
 
-
-
 namespace PDFsplitter
 {
     public partial class Form1 : Form
     {
         private List<pdfFile> pdfFiles = new List<pdfFile> { };
         private List<PDFViewItem> viewItems = new List<PDFViewItem> { };
-
-        /* private void renderList()
-         {
-             textBox1.Text = String.Join(Environment.NewLine, pdfFiles);
-         }
-         */
 
         public Form1()
         {
@@ -52,37 +43,47 @@ namespace PDFsplitter
                 };
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
+                   
                     foreach (string item in openFileDialog1.FileNames)
                     {
-                       pdfFile file = new pdfFile(item);
-                        pdfFiles.Add(file);                     
+                        pdfFile file = new pdfFile(item);
+                        pdfFiles.Add(file);
                         listCount++;
+
+                       
+
                     }
                 }
-                Console.WriteLine(listCount);
+            }
+            readFile(listCount);           
+        }
 
-                for (int i=pdfFiles.Count - listCount; i < pdfFiles.Count; i++)
+       
+        public void readFile(int listCount)
+        {
+            for (int i = pdfFiles.Count - listCount; i < pdfFiles.Count; i++)
             {
                 string pdfFilePath = pdfFiles.ElementAt(i).getFileName();
                 string outputPath = pathTextBox.Text;
                 int interval = 1;
                 int pageNameSuffix = 0;
+
+                string fileName= pdfFiles.ElementAt(i).getName();
+                int filePages= pdfFiles.ElementAt(i).getNumberOfPages( pdfFiles.ElementAt(i).getFileName());
+
+                PDFViewItem viewItem = new PDFViewItem(fileName,filePages);
+               
+                viewItems.Add(viewItem);
+                panel.Controls.Add(viewItem);
+
                 PdfReader reader = new PdfReader(pdfFilePath);
                 FileInfo file = new FileInfo(pdfFilePath);
                 string pdfFileName = file.Name.Substring(0, file.Name.LastIndexOf(".")) + "-";
                 string pattern = @"\b[A-Z]{2,4}[0-9]{5,7}([A-Z]{1,2})?([0-9]{3,4})?(-)?[0-9]{3,4}";
                 // string pattern = @"\b[A-Z]{2,4}[0-9]{5,7}([A-Z]{1,2})?([0-9]{3,4})?\s?(-)?\s?[0-9]{3,4}"; with space
                 Regex rg = new Regex(pattern);
-
-                    PDFViewItem viewItem = new PDFViewItem();
-
-                    viewItem.PDFName = file.Name.Substring(0, file.Name.LastIndexOf(".")) + ".pdf"; 
-                    viewItem.PDFPages = reader.NumberOfPages;
-                    viewItems.Add(viewItem);
-                    panel.Controls.Add(viewItem);
-                
-                    for (int pageNumber = 1; pageNumber <= reader.NumberOfPages; pageNumber += interval)
-                    {
+                for (int pageNumber = 1; pageNumber <= reader.NumberOfPages; pageNumber += interval)
+                {
 
                     StringBuilder text = new StringBuilder();
                     pageNameSuffix++;
@@ -103,12 +104,11 @@ namespace PDFsplitter
                         string newPdfFileName = string.Format(pdfFileName + "{0}", pageNameSuffix);
                         splitAndSave(pdfFilePath, outputPath, pageNumber, interval, newPdfFileName);
                     }
-                        viewItem.progressValue(pageNumber);
-                    }                
+                      viewItem.progressValue(pageNumber);
                 }
             }
         }
-      
+
         public void splitAndSave(string pdfFilePath, string outputPath, int startPage, int interval, string pdfFileName)
         {
             using (PdfReader reader = new PdfReader(pdfFilePath))
@@ -178,57 +178,19 @@ namespace PDFsplitter
                         pdfFiles.Add(file);                    
                         listCount++;
                     }
-                }
-                //  renderList();
-                for (int i = pdfFiles.Count - listCount; i < pdfFiles.Count; i++)
-                {
-                    string pdfFilePath = pdfFiles.ElementAt(i).getFileName();
-                    string outputPath = pathTextBox.Text;
-                    int interval = 1;
-                    int pageNameSuffix = 0;
-                    PdfReader reader = new PdfReader(pdfFilePath);
-                    FileInfo file = new FileInfo(pdfFilePath);
-                    string pdfFileName = file.Name.Substring(0, file.Name.LastIndexOf(".")) + "-";
-                    string pattern = @"\b[A-Z]{2,4}[0-9]{5,7}([A-Z]{1,2})?([0-9]{3,4})?(-)?[0-9]{3,4}";
-                    // string pattern = @"\b[A-Z]{2,4}[0-9]{5,7}([A-Z]{1,2})?([0-9]{3,4})?\s?(-)?\s?[0-9]{3,4}"; with space
-                    Regex rg = new Regex(pattern);
-
-                    PDFViewItem viewItem = new PDFViewItem();
-                    viewItem.PDFName = file.Name.Substring(0, file.Name.LastIndexOf(".")) + ".pdf"; ;
-                    viewItem.PDFPages = reader.NumberOfPages;
-                    viewItems.Add(viewItem);
-                    panel.Controls.Add(viewItem);
-
-                    for (int pageNumber = 1; pageNumber <= reader.NumberOfPages; pageNumber += interval)
-                    {
-                        StringBuilder text = new StringBuilder();
-                        pageNameSuffix++;
-
-                        text.Append(PdfTextExtractor.GetTextFromPage(reader, pageNumber));
-
-                        MatchCollection mc = rg.Matches(text.ToString());
-                        if (mc.Count != 0)
-                        {
-                            for (int count = 0; count < mc.Count - mc.Count + 1; count++)
-                            {
-                                string newPdfFileName = string.Format(mc[count].Value);
-                                splitAndSave(pdfFilePath, outputPath, pageNumber, interval, newPdfFileName);
-                            }
-                        }
-                        else
-                        {
-                            string newPdfFileName = string.Format(pdfFileName + "{0}", pageNameSuffix);
-                            splitAndSave(pdfFilePath, outputPath, pageNumber, interval, newPdfFileName);
-                        }
-
-                        viewItem.progressValue(pageNumber);   
-                    }
-                   
-
-                }
+                }                            
             }
+            readFile(listCount);
+        }
 
-            }
+        private PDFViewItem createViewItem(string fileName, int filePages)
+        {
+            PDFViewItem viewItem = new PDFViewItem(fileName, filePages);
+
+            viewItems.Add(viewItem);
+            panel.Controls.Add(viewItem);
+            return viewItem;
+        }
 
         private void button1_DragEnter_1(object sender, DragEventArgs e)
         {

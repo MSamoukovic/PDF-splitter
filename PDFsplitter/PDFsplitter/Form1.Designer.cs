@@ -121,6 +121,7 @@
             this.panel.AutoScroll = true;
             this.panel.BackColor = System.Drawing.Color.White;
             this.panel.Location = new System.Drawing.Point(201, 140);
+            this.panel.Margin = new System.Windows.Forms.Padding(0);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(644, 349);
             this.panel.TabIndex = 28;

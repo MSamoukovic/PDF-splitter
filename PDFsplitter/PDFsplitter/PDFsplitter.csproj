@@ -39,11 +39,8 @@
     <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <HintPath>..\packages\AjaxControlToolkit.19.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
-      <HintPath>..\..\..\..\..\Desktop\Bunifu UI WinForms 1.11.5.21\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\Bunifu UI WinForms 1.11.5.21\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Design, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
       <HintPath>..\packages\Krypton.Components.Suite.4.5.9\lib\net20\ComponentFactory.Krypton.Design.dll</HintPath>

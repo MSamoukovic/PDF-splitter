@@ -14,9 +14,12 @@ namespace PDFsplitter.Models
     public partial class PDFViewItem : UserControl
     {
 
-        public PDFViewItem()
+        public PDFViewItem(string fileName, int filePages)
         {
             InitializeComponent();
+            PDFName = fileName;
+            PDFPages = filePages;
+
         }
 
         #region Properties
@@ -26,15 +29,30 @@ namespace PDFsplitter.Models
 
         public string PDFName
         {
-            get { return pdfName; }
-            set { pdfName = value; itemNameLabel.Text = value; }
+            get 
+            {
+                return pdfName; 
+            }
+            set 
+            {
+                pdfName = value; 
+                itemNameLabel.Text = value; 
+            }
         }
 
         public int PDFPages
         {
-            get { return pdfPages; }
-            set { pdfPages = value; itemPagesLabel.Text = value.ToString() + pageOrPages(PDFName); }
+            get 
+            {
+                return pdfPages; 
+            }
+            set 
+            {
+                pdfPages = value; 
+                itemPagesLabel.Text = value.ToString() + pageOrPages(PDFName); 
+            }
         }
+
 
         public string pageOrPages(string PDFName)
         {
@@ -44,11 +62,6 @@ namespace PDFsplitter.Models
                 return " pages";
         }
 
-        public void nn() 
-        {
-          itemNameLabel.Text = "MAJA";
-        }
- 
         public void progressValue(int pageNumber)
         {
             int percent = pageNumber * 100;
@@ -56,7 +69,7 @@ namespace PDFsplitter.Models
             progressBar.Value = Convert.ToInt32(m);
             Console.WriteLine(progressBar.Value);
 
-            percentLabel.Text = progressBar.Value.ToString() + " %";
+            //percentLabel.Text = progressBar.Value.ToString() + " %";
 
             if (progressBar.Value == progressBar.MaximumValue)
             checkbox.Checked = true;
