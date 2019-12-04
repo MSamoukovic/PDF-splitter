@@ -36,6 +36,9 @@
             this.chooseFileButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -126,6 +129,19 @@
             this.panel.Size = new System.Drawing.Size(644, 349);
             this.panel.TabIndex = 28;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(61, 116);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,6 +151,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1044, 740);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.pictureBox3);
@@ -164,6 +181,9 @@
         private MetroFramework.Controls.MetroTextBox pathTextBox;
         private System.Windows.Forms.Button chooseFileButton;
         private System.Windows.Forms.FlowLayoutPanel panel;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }
 
