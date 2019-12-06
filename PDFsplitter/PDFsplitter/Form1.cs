@@ -12,8 +12,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Timers;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace PDFsplitter
@@ -26,11 +24,24 @@ namespace PDFsplitter
         private List<BackgroundWorker> backgroundWorkersList = new List<BackgroundWorker> { };
 
 
-        private delegate void DELEGATE();
+        private delegate void reportProgress(int currentPages); 
+        
+        delegate int NumberChanger(int currentPages);
+
+
+        BackgroundWorker createViewItem;
+
+        Thread t;
+        string myString = "";
+
+
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        
 
         private void chooseFileButton_Click(object sender, EventArgs e)
         {
@@ -46,7 +57,7 @@ namespace PDFsplitter
                 OpenFileDialog openFileDialog1 = new OpenFileDialog
                 {
                     Filter = "PDF|*.PDF",
-                   // Multiselect = true
+                   //Multiselect = true
                 };
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
@@ -57,28 +68,48 @@ namespace PDFsplitter
                         numberOfSelectedFiles++;
                     }
                 }
-                  readFile(numberOfSelectedFiles);
+                readFile(numberOfSelectedFiles);
             }
         }
-        public void readFile(int numberOfSelectedFiles)
-        {            
+
+        private void readFile(int numberOfSelectedFiles)
+        {
+
             for (int i = pdfFiles.Count - numberOfSelectedFiles; i < pdfFiles.Count; i++)
-            {
-                //Thread t = new Thread(() => pdfReader(i));
-                //t.Start();
-                //createViewItem(i);
-                Console.WriteLine(i);
+            {          
+                t = new Thread(() => OVO());
+                t.Start();
 
-                for (int k = 0; k < numberOfSelectedFiles; k++)
-                {
-                    createBackgroundWorker(i);
-                }
-                //Thread t = new Thread(() => backgroundWorker(i));
-                //t.Start();
+                while (t.IsAlive) ;
+                textBox1.Text = myString;
 
-                createViewItem(i);
+
+                 createViewItem_doWork(i);
             }
         }
+
+
+        public void OVO()
+        {
+            for(int a=0;a<4;a++)
+            myString += "maja"+ "\r\n";
+        }
+
+        private void createViewItem_doWork(int i)
+        {
+            string itemName = pdfFiles.ElementAt(i).getName();
+            int itemPages = pdfFiles.ElementAt(i).getNumberOfPages(pdfFiles.ElementAt(i).getFileName());
+            PDFViewItem viewItem = new PDFViewItem(itemName, itemPages);
+
+            this.Invoke(new MethodInvoker(delegate
+            {
+                viewItems.Add(viewItem);
+                panel.Controls.Add(viewItem);
+                viewItem.progressValue(1);
+               // label2.Text = itemName;
+            }));
+        }
+
         private void createBackgroundWorker(int i)
         {
             BackgroundWorker pdfReader = new BackgroundWorker();
@@ -94,17 +125,9 @@ namespace PDFsplitter
             label2.Text = ("Progress: " + e.ProgressPercentage.ToString() + "%");
         }
 
-        private void createViewItem(int i)
-        {
-            string itemName = pdfFiles.ElementAt(i).getName();
-            int itemPages = pdfFiles.ElementAt(i).getNumberOfPages(pdfFiles.ElementAt(i).getFileName());
-            PDFViewItem viewItem = new PDFViewItem(itemName,itemPages);
-            viewItems.Add(viewItem);
-            panel.Controls.Add(viewItem);
-        }
-
         private void pdfReader_DoWork(int i)
         {
+            
             string pdfFilePath = pdfFiles.ElementAt(i).getFileName();
             string outputPath = pathTextBox.Text;
             int interval = 1;
@@ -130,13 +153,13 @@ namespace PDFsplitter
                 {
                     for (int count = 0; count < mc.Count - mc.Count + 1; count++)
                     {
-                        string newPdfFileName = string.Format(mc[count].Value);                  
+                        string newPdfFileName = string.Format(mc[count].Value);
                         splitAndSave(pdfFilePath, outputPath, pageNumber, interval, newPdfFileName);
                     }
                 }
                 else
                 {
-                    string newPdfFileName = string.Format(pdfFileName + "{0}", pageNameSuffix);         
+                    string newPdfFileName = string.Format(pdfFileName + "{0}", pageNameSuffix);
                     splitAndSave(pdfFilePath, outputPath, pageNumber, interval, newPdfFileName);
                 }
 
@@ -144,11 +167,8 @@ namespace PDFsplitter
                 double value = percent / reader.NumberOfPages;
                 int reportValue = Convert.ToInt32(value);
 
-                backgroundWorkersList[i].ReportProgress(reportValue);
-               // viewItems[i].progressValue(20); // ovo ne moze jer je to drugi thread (main thread)
-                Console.WriteLine(reportValue);
-
-
+               
+                backgroundWorkersList[i].ReportProgress(reportValue);          
             }
         }
         public void splitAndSave(string pdfFilePath, string outputPath, int startPage, int interval, string pdfFileName)
@@ -190,6 +210,7 @@ namespace PDFsplitter
             panel.Controls.Clear();
             viewItems.Clear();
             pdfFiles.Clear();
+            backgroundWorkersList.Clear();
         }
 
         private void chooseFileButton_DragDrop_1(object sender, DragEventArgs e)
@@ -247,8 +268,6 @@ namespace PDFsplitter
             {
                 System.Diagnostics.Process.Start(pathTextBox.Text);
             }
-        }
-
-      
+        }        
     }
 }

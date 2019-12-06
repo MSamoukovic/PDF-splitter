@@ -102,5 +102,7 @@ namespace PDFsplitter
         {
             this.Close();
         }
+
+      
     }
 }

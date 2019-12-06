@@ -55,7 +55,7 @@
             this.okButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.okButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.okButton.ForeColor = System.Drawing.Color.Black;
-            this.okButton.Image = ((System.Drawing.Image)(resources.GetObject("okButton.Image")));
+            this.okButton.Image = null;
             this.okButton.ImagePosition = 0;
             this.okButton.ImageZoom = 0;
             this.okButton.LabelPosition = 31;

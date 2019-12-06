@@ -62,7 +62,6 @@ namespace PDFsplitter.Models
 
         public int getNumberOfPages(string fileName)
         {
-
             PdfReader pdfReader = new PdfReader(fileName);
             int numberOfPages = pdfReader.NumberOfPages;
             return numberOfPages;

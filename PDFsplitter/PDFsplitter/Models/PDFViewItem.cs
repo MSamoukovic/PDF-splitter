@@ -55,7 +55,7 @@ namespace PDFsplitter.Models
         {
             int percent = pageNumber * 100;
             double m = percent / PDFPages;
-            progressBar.Value = Convert.ToInt32(m);
+            progressBar.Value=Convert.ToInt32(m);
             // Console.WriteLine(progressBar.Value);
 
             // percentLabel.Text = progressBar.Value.ToString() + " %";
