@@ -189,6 +189,7 @@
     <None Include="Resources\adobe-acrobat-pdf-file-512.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bunifu_UI_v1.52.dll" />
     <Content Include="MetroFramework.txt" />
     <None Include="Resources\istockphoto-528737408-612x612.jpg" />
     <None Include="Resources\button-background-png-9.png" />

@@ -21,17 +21,13 @@ namespace PDFsplitter
         private List<pdfFile> pdfFiles = new List<pdfFile> { };
         private List<PDFViewItem> viewItems = new List<PDFViewItem> { };
         private List<BackgroundWorker> backgroundWorkersList = new List<BackgroundWorker> { };
-     //   private List<Thread> threadsList = new List<Thread> { };
+        private List<BackgroundWorker> items = new List<BackgroundWorker> { };
+
+
         public Form1()
         {
-            InitializeComponent();
-
-
-            
-             
-
+            InitializeComponent();  
         }
-
         private void chooseFileButton_Click(object sender, EventArgs e)
         {
             int numberOfSelectedFiles = 0;
@@ -65,39 +61,35 @@ namespace PDFsplitter
         {
             for (int i = pdfFiles.Count - numberOfSelectedFiles; i < pdfFiles.Count; i++)
             {
-                // createViewItem(i);
-                int j = i;
-                createBackgroundWorker( j);
+                createViewItem(i);
+                createBackgroundWorker(i);
             }
         }
         
         private void createViewItem(int i)
         {
-         //   this.BeginInvoke(new MethodInvoker(delegate
-          //  {
-                string itemName = pdfFiles.ElementAt(i).getName();
+            string itemName = pdfFiles.ElementAt(i).getName();
             int itemPages = pdfFiles.ElementAt(i).getNumberOfPages(pdfFiles.ElementAt(i).getFileName());
             PDFViewItem viewItem = new PDFViewItem(itemName, itemPages);
             viewItems.Add(viewItem);
             panel.Controls.Add(viewItem);
-          //  }));
-
         }
 
         private void createBackgroundWorker(int i)
         {
-            createViewItem(i);
             BackgroundWorker pdfReader = new BackgroundWorker();
             backgroundWorkersList.Add(pdfReader);
             pdfReader.DoWork += (obj, e) => pdfReader_DoWork(i);
-            pdfReader.ProgressChanged += PdfReader_ProgressChanged;
+            //pdfReader.ProgressChanged += PdfReader_ProgressChanged;
             pdfReader.WorkerReportsProgress = true;
+            pdfReader.RunWorkerCompleted += pdfReader_RunWorkerCompleted;
+
             pdfReader.RunWorkerAsync();
+            clearButton.Enabled = false;
         }
-
-        private void PdfReader_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        { 
-
+        private void pdfReader_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {           
+            clearButton.Enabled = true;
         }
 
         private void pdfReader_DoWork(int i)
@@ -141,13 +133,9 @@ namespace PDFsplitter
                 double value = percent / reader.NumberOfPages;
                 int reportValue = Convert.ToInt32(value);
 
-                viewItems[i].progressValue(pageNumber); 
-                
-
+                viewItems[i].progressValue(pageNumber);               
             }
         }
-
-   
 
         public void splitAndSave(string pdfFilePath, string outputPath, int startPage, int interval, string pdfFileName)
         {
@@ -215,21 +203,11 @@ namespace PDFsplitter
                         pdfFile file = new pdfFile(item);
                         pdfFiles.Add(file);
                         numberOfSelectedFiles++;
-
-                        /*   PDFViewItem viewItem = new PDFViewItem();
-                       /   viewItem.PDFName = file.getName();
-                           viewItem.PDFPages = file.getNumberOfPages(file.getFileName());
-                           viewItems.Add(viewItem);
-                           panel.Controls.Add(viewItem);
-                           */
                     }
                 }
-                //  renderList();
-
                 readFile(numberOfSelectedFiles);
             }
         }
-
         private void chooseFileButton_DragEnter_1(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.All;
@@ -245,11 +223,6 @@ namespace PDFsplitter
             {
                 System.Diagnostics.Process.Start(pathTextBox.Text);
             }
-        }
-
-        private void Form1_Shown(object sender, EventArgs e)
-        {
-
         }
     }
 }

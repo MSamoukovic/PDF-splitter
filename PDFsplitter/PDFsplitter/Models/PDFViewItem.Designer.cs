@@ -91,9 +91,9 @@
             this.percentLabel.ForeColor = System.Drawing.Color.DarkBlue;
             this.percentLabel.Location = new System.Drawing.Point(427, 28);
             this.percentLabel.Name = "percentLabel";
-            this.percentLabel.Size = new System.Drawing.Size(39, 16);
+            this.percentLabel.Size = new System.Drawing.Size(93, 16);
             this.percentLabel.TabIndex = 12;
-            this.percentLabel.Text = "maja";
+            this.percentLabel.Text = "percentLabel";
             // 
             // PDFViewItem
             // 

@@ -15,23 +15,16 @@ namespace PDFsplitter.Models
     {
         public PDFViewItem(string pdfName, int pdfPages)
         {
-
             InitializeComponent();
-
             PDFName = pdfName;
             PDFPages = pdfPages;
-
-          //  Invalidate();
-            
-
+            // Invalidate();      
             // this.pdfName = pdfName;
             // this.pdfPages = pdfPages;
             // this.itemNameLabel.Text = pdfName;
             // this.itemPagesLabel.Text = pdfPages.ToString();
 
         }
-
-        public PDFViewItem() { }
         #region Properties
 
         private string pdfName;
@@ -40,10 +33,8 @@ namespace PDFsplitter.Models
         public string PDFName
         {
             get { return pdfName; }
-            set { pdfName = value; itemNameLabel.Text = value; }
-            
+            set { pdfName = value; itemNameLabel.Text = value; }       
         }
-
 
         public int PDFPages
         {
@@ -63,7 +54,6 @@ namespace PDFsplitter.Models
             int percent = pageNumber * 100;
             double m = percent / PDFPages;
 
-
             this.BeginInvoke(new MethodInvoker(delegate
             {
                 progressBar.Value = Convert.ToInt32(m);
@@ -75,13 +65,7 @@ namespace PDFsplitter.Models
                 }
             }));
         }
-
-
-
-
         #endregion
-
-
     }
 }
 
