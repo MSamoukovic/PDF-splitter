@@ -22,10 +22,5 @@ namespace PDFsplitter
             this.Close();
 
         }
-
-        private void draganddropMessageBox_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

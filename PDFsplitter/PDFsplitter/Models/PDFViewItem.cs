@@ -61,7 +61,7 @@ namespace PDFsplitter.Models
                 if (progressBar.Value == progressBar.MaximumValue)
                 {
                     checkbox.Checked = true;
-                    percentLabel.Visible = false;
+                    percentLabel.Visible = false;         
                 }
             }));
         }

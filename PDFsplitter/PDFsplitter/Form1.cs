@@ -21,8 +21,6 @@ namespace PDFsplitter
         private List<pdfFile> pdfFiles = new List<pdfFile> { };
         private List<PDFViewItem> viewItems = new List<PDFViewItem> { };
         private List<BackgroundWorker> backgroundWorkersList = new List<BackgroundWorker> { };
-        private List<BackgroundWorker> items = new List<BackgroundWorker> { };
-
 
         public Form1()
         {
@@ -53,16 +51,19 @@ namespace PDFsplitter
                         numberOfSelectedFiles++;
                     }
                 }
-                readFile(numberOfSelectedFiles);
+                selectedFiles(numberOfSelectedFiles);
+
             }
         }
 
-        private void readFile(int numberOfSelectedFiles)
+        private void selectedFiles(int numberOfSelectedFiles)
         {
             for (int i = pdfFiles.Count - numberOfSelectedFiles; i < pdfFiles.Count; i++)
             {
                 createViewItem(i);
                 createBackgroundWorker(i);
+
+
             }
         }
         
@@ -75,25 +76,43 @@ namespace PDFsplitter
             panel.Controls.Add(viewItem);
         }
 
+        public void isbusy()
+        {
+            for(int j=0;j<backgroundWorkersList.Count;j++)
+            {
+                if (backgroundWorkersList[j].IsBusy == true)
+                {
+                    clearButton.Enabled = false;
+                    return;
+                }
+
+            }
+            clearButton.Enabled = true;
+        }   
         private void createBackgroundWorker(int i)
         {
             BackgroundWorker pdfReader = new BackgroundWorker();
             backgroundWorkersList.Add(pdfReader);
-            pdfReader.DoWork += (obj, e) => pdfReader_DoWork(i);
-            //pdfReader.ProgressChanged += PdfReader_ProgressChanged;
+            pdfReader.DoWork += (obj, e) => pdfReader_DoWork(i);         
+            pdfReader.ProgressChanged += PdfReader_ProgressChanged;
             pdfReader.WorkerReportsProgress = true;
             pdfReader.RunWorkerCompleted += pdfReader_RunWorkerCompleted;
-
             pdfReader.RunWorkerAsync();
-            clearButton.Enabled = false;
+            isbusy();
         }
+
+        private void PdfReader_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            isbusy();
+        }
+
         private void pdfReader_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {           
             clearButton.Enabled = true;
         }
 
         private void pdfReader_DoWork(int i)
-        { 
+        {
             string pdfFilePath = pdfFiles.ElementAt(i).getFileName();
             string outputPath = pathTextBox.Text;
             int interval = 1;
@@ -132,8 +151,9 @@ namespace PDFsplitter
                 int percent = pageNumber * 100;
                 double value = percent / reader.NumberOfPages;
                 int reportValue = Convert.ToInt32(value);
+                backgroundWorkersList[i].ReportProgress(reportValue);  
 
-                viewItems[i].progressValue(pageNumber);               
+                viewItems[i].progressValue(pageNumber);
             }
         }
 
@@ -205,7 +225,7 @@ namespace PDFsplitter
                         numberOfSelectedFiles++;
                     }
                 }
-                readFile(numberOfSelectedFiles);
+                selectedFiles(numberOfSelectedFiles);
             }
         }
         private void chooseFileButton_DragEnter_1(object sender, DragEventArgs e)

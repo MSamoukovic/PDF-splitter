@@ -53,7 +53,7 @@
             this.okButton.color = System.Drawing.Color.Silver;
             this.okButton.colorActive = System.Drawing.Color.Silver;
             this.okButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.okButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.okButton.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.okButton.ForeColor = System.Drawing.Color.Black;
             this.okButton.Image = null;
             this.okButton.ImagePosition = 0;
