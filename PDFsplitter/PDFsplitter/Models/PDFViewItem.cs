@@ -13,9 +13,11 @@ namespace PDFsplitter.Models
 {
     public partial class PDFViewItem : UserControl
     {
-        public PDFViewItem(string pdfName, int pdfPages)
+            public PDFViewItem(string pdfName, int pdfPages)
         {
             InitializeComponent();
+           
+
             PDFName = pdfName;
             PDFPages = pdfPages;
             // Invalidate();      
@@ -64,6 +66,18 @@ namespace PDFsplitter.Models
                     percentLabel.Visible = false;         
                 }
             }));
+        }
+
+
+        public void drawItem(int widthOfPanel)
+        {
+            int x = widthOfPanel * 60;
+            double y = x / 100;
+            progressBar.Width = Convert.ToInt32(y);
+
+            percentLabel.Location= new System.Drawing.Point(progressBar.Width+20, 26);
+            checkbox.Location = new System.Drawing.Point(progressBar.Width + 30, 25);
+            itemPagesLabel.Location = new System.Drawing.Point(progressBar.Width+65, 26);
         }
         #endregion
     }

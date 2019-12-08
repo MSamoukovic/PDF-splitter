@@ -93,8 +93,6 @@
             this.MinimizeBox = false;
             this.Name = "messageBoxForm";
             this.Padding = new System.Windows.Forms.Padding(9);
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDF-splitter";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

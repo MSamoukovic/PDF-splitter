@@ -24,7 +24,8 @@ namespace PDFsplitter
 
         public Form1()
         {
-            InitializeComponent();  
+            InitializeComponent();
+            this.Resize += Form1_Resize;
         }
         private void chooseFileButton_Click(object sender, EventArgs e)
         {
@@ -72,6 +73,8 @@ namespace PDFsplitter
             string itemName = pdfFiles.ElementAt(i).getName();
             int itemPages = pdfFiles.ElementAt(i).getNumberOfPages(pdfFiles.ElementAt(i).getFileName());
             PDFViewItem viewItem = new PDFViewItem(itemName, itemPages);
+            viewItem.Width = panel.Width-29;
+            viewItem.drawItem(panel.Width);
             viewItems.Add(viewItem);
             panel.Controls.Add(viewItem);
         }
@@ -243,6 +246,17 @@ namespace PDFsplitter
             {
                 System.Diagnostics.Process.Start(pathTextBox.Text);
             }
+        }
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            for (int j = 0; j < viewItems.Count; j++)
+            {
+                viewItems[j].Width = panel.Width-29;
+                viewItems[j].drawItem(panel.Width);
+
+
+            }
+
         }
     }
 }
