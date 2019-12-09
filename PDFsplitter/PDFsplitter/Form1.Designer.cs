@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pathTextBox = new MetroFramework.Controls.MetroTextBox();
             this.clearButton = new System.Windows.Forms.Button();
-            this.chooseFileButton = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chooseFileButton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,33 +87,6 @@
             this.clearButton.UseVisualStyleBackColor = false;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
-            // chooseFileButton
-            // 
-            this.chooseFileButton.AllowDrop = true;
-            this.chooseFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chooseFileButton.AutoSize = true;
-            this.chooseFileButton.BackColor = System.Drawing.Color.White;
-            this.chooseFileButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chooseFileButton.BackgroundImage")));
-            this.chooseFileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.tableLayoutPanel.SetColumnSpan(this.chooseFileButton, 3);
-            this.chooseFileButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chooseFileButton.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.chooseFileButton.ForeColor = System.Drawing.Color.Silver;
-            this.chooseFileButton.Location = new System.Drawing.Point(0, 324);
-            this.chooseFileButton.Margin = new System.Windows.Forms.Padding(0);
-            this.chooseFileButton.Name = "chooseFileButton";
-            this.tableLayoutPanel.SetRowSpan(this.chooseFileButton, 8);
-            this.chooseFileButton.Size = new System.Drawing.Size(707, 163);
-            this.chooseFileButton.TabIndex = 25;
-            this.chooseFileButton.Text = "Choose file or drag it here";
-            this.chooseFileButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.chooseFileButton.UseVisualStyleBackColor = false;
-            this.chooseFileButton.Click += new System.EventHandler(this.chooseFileButton_Click);
-            this.chooseFileButton.DragDrop += new System.Windows.Forms.DragEventHandler(this.chooseFileButton_DragDrop_1);
-            this.chooseFileButton.DragEnter += new System.Windows.Forms.DragEventHandler(this.chooseFileButton_DragEnter_1);
-            // 
             // panel
             // 
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -144,7 +117,7 @@
             this.tableLayoutPanel.Controls.Add(this.pictureBox2, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.clearButton, 1, 4);
             this.tableLayoutPanel.Controls.Add(this.label1, 0, 1);
-            this.tableLayoutPanel.Location = new System.Drawing.Point(118, 45);
+            this.tableLayoutPanel.Location = new System.Drawing.Point(123, 37);
             this.tableLayoutPanel.MinimumSize = new System.Drawing.Size(450, 400);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 12;
@@ -180,6 +153,33 @@
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // chooseFileButton
+            // 
+            this.chooseFileButton.AllowDrop = true;
+            this.chooseFileButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chooseFileButton.AutoSize = true;
+            this.chooseFileButton.BackColor = System.Drawing.Color.White;
+            this.chooseFileButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("chooseFileButton.BackgroundImage")));
+            this.chooseFileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tableLayoutPanel.SetColumnSpan(this.chooseFileButton, 3);
+            this.chooseFileButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chooseFileButton.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.chooseFileButton.ForeColor = System.Drawing.Color.Silver;
+            this.chooseFileButton.Location = new System.Drawing.Point(0, 324);
+            this.chooseFileButton.Margin = new System.Windows.Forms.Padding(0);
+            this.chooseFileButton.Name = "chooseFileButton";
+            this.tableLayoutPanel.SetRowSpan(this.chooseFileButton, 8);
+            this.chooseFileButton.Size = new System.Drawing.Size(707, 163);
+            this.chooseFileButton.TabIndex = 25;
+            this.chooseFileButton.Text = "Choose file or drag it here";
+            this.chooseFileButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chooseFileButton.UseVisualStyleBackColor = false;
+            this.chooseFileButton.Click += new System.EventHandler(this.chooseFileButton_Click);
+            this.chooseFileButton.DragDrop += new System.Windows.Forms.DragEventHandler(this.chooseFileButton_DragDrop_1);
+            this.chooseFileButton.DragEnter += new System.Windows.Forms.DragEventHandler(this.chooseFileButton_DragEnter_1);
             // 
             // pictureBox2
             // 

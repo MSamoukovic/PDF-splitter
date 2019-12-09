@@ -100,7 +100,7 @@
         }
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ns1.BunifuTileButton okButton;
+      //  private ns1.BunifuTileButton okButton;
         private System.Windows.Forms.Label label1;
         private ns1.BunifuTileButton notPDFFileButton;
     }

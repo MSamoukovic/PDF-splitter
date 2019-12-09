@@ -22,6 +22,8 @@ namespace PDFsplitter
         private List<PDFViewItem> viewItems = new List<PDFViewItem> { };
         private List<BackgroundWorker> backgroundWorkersList = new List<BackgroundWorker> { };
 
+       // private List<PDFViewItem> viewItemsList = new List<PDFViewItem> { };
+
         public Form1()
         {
             InitializeComponent();
@@ -50,10 +52,10 @@ namespace PDFsplitter
                         pdfFile file = new pdfFile(item);
                         pdfFiles.Add(file);
                         numberOfSelectedFiles++;
+                        createItem(file);
                     }
                 }
                 selectedFiles(numberOfSelectedFiles);
-
             }
         }
 
@@ -61,25 +63,31 @@ namespace PDFsplitter
         {
             for (int i = pdfFiles.Count - numberOfSelectedFiles; i < pdfFiles.Count; i++)
             {
-                createViewItem(i);
+                //  createViewItem(i);
                 createBackgroundWorker(i);
-
-
             }
         }
-        
-        private void createViewItem(int i)
+        private void createItem(pdfFile file) //ako pozivam na click
         {
-            string itemName = pdfFiles.ElementAt(i).getName();
-            int itemPages = pdfFiles.ElementAt(i).getNumberOfPages(pdfFiles.ElementAt(i).getFileName());
-            PDFViewItem viewItem = new PDFViewItem(itemName, itemPages);
-            viewItem.Width = panel.Width-29;
+            PDFViewItem viewItem = new PDFViewItem(file.getName(), file.getNumberOfPages(file.getFileName()));
+            viewItem.Width = panel.Width - 29;
             viewItem.drawItem(panel.Width);
             viewItems.Add(viewItem);
             panel.Controls.Add(viewItem);
         }
+           
+       //private void createViewItem(int i) ako pozivam u u metodi selectedFiles()
+       // {
+       //     string itemName = pdfFiles.ElementAt(i).getName();
+       //     int itemPages = pdfFiles.ElementAt(i).getNumberOfPages(pdfFiles.ElementAt(i).getFileName());
+       //     PDFViewItem viewItem = new PDFViewItem(itemName, itemPages);
+       //     viewItem.Width = panel.Width-29;
+       //     viewItem.drawItem(panel.Width);
+       //     viewItems.Add(viewItem);
+       //     panel.Controls.Add(viewItem);
+       // }
 
-        public void isbusy()
+        public void isBackgroundWorkerBusy()
         {
             for(int j=0;j<backgroundWorkersList.Count;j++)
             {
@@ -88,7 +96,6 @@ namespace PDFsplitter
                     clearButton.Enabled = false;
                     return;
                 }
-
             }
             clearButton.Enabled = true;
         }   
@@ -101,19 +108,16 @@ namespace PDFsplitter
             pdfReader.WorkerReportsProgress = true;
             pdfReader.RunWorkerCompleted += pdfReader_RunWorkerCompleted;
             pdfReader.RunWorkerAsync();
-            isbusy();
+            isBackgroundWorkerBusy();
         }
-
         private void PdfReader_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            isbusy();
+            isBackgroundWorkerBusy();
         }
-
         private void pdfReader_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {           
             clearButton.Enabled = true;
         }
-
         private void pdfReader_DoWork(int i)
         {
             string pdfFilePath = pdfFiles.ElementAt(i).getFileName();
@@ -154,12 +158,11 @@ namespace PDFsplitter
                 int percent = pageNumber * 100;
                 double value = percent / reader.NumberOfPages;
                 int reportValue = Convert.ToInt32(value);
-                backgroundWorkersList[i].ReportProgress(reportValue);  
+                backgroundWorkersList[i].ReportProgress(reportValue);
 
-                viewItems[i].progressValue(pageNumber);
+                  viewItems[i].progressValue(pageNumber, reader.NumberOfPages);
             }
         }
-
         public void splitAndSave(string pdfFilePath, string outputPath, int startPage, int interval, string pdfFileName)
         {
             using (PdfReader reader = new PdfReader(pdfFilePath))
@@ -253,8 +256,6 @@ namespace PDFsplitter
             {
                 viewItems[j].Width = panel.Width-29;
                 viewItems[j].drawItem(panel.Width);
-
-
             }
 
         }
