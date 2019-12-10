@@ -22,8 +22,6 @@ namespace PDFsplitter
         private List<PDFViewItem> viewItems = new List<PDFViewItem> { };
         private List<BackgroundWorker> backgroundWorkersList = new List<BackgroundWorker> { };
 
-       // private List<PDFViewItem> viewItemsList = new List<PDFViewItem> { };
-
         public Form1()
         {
             InitializeComponent();
@@ -69,10 +67,10 @@ namespace PDFsplitter
         }
         private void createItem(pdfFile file) //ako pozivam na click
         {
-            PDFViewItem viewItem = new PDFViewItem(file.getName(), file.getNumberOfPages(file.getFileName()));
+            PDFViewItem viewItem = new PDFViewItem(file.getName(), file.getNumberOfPages(file.getFileName()));        
             viewItem.Width = panel.Width - 29;
-            viewItem.drawItem(panel.Width);
-            viewItems.Add(viewItem);
+            viewItem.drawItems(panel.Width);
+            viewItems.Add(viewItem);      
             panel.Controls.Add(viewItem);
         }
            
@@ -160,7 +158,7 @@ namespace PDFsplitter
                 int reportValue = Convert.ToInt32(value);
                 backgroundWorkersList[i].ReportProgress(reportValue);
 
-                  viewItems[i].progressValue(pageNumber, reader.NumberOfPages);
+                  viewItems[i].progressValue(pageNumber, reader.NumberOfPages, pdfFiles.ElementAt(i).getName());
             }
         }
         public void splitAndSave(string pdfFilePath, string outputPath, int startPage, int interval, string pdfFileName)
@@ -229,6 +227,8 @@ namespace PDFsplitter
                         pdfFile file = new pdfFile(item);
                         pdfFiles.Add(file);
                         numberOfSelectedFiles++;
+                        createItem(file);
+
                     }
                 }
                 selectedFiles(numberOfSelectedFiles);
@@ -252,12 +252,22 @@ namespace PDFsplitter
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
+            Console.WriteLine(panel.Width);
             for (int j = 0; j < viewItems.Count; j++)
             {
-                viewItems[j].Width = panel.Width-29;
-                viewItems[j].drawItem(panel.Width);
+                viewItems[j].Width = panel.Width-30;
+                viewItems[j].drawItems(panel.Width);
+                panel.HorizontalScroll.Enabled = false;
+                panel.HorizontalScroll.Maximum = 0;
+                panel.AutoScroll = false;
+                panel.AutoScroll = true;
+
+                
             }
 
-        }
+            
+
+
+        }        
     }
 }

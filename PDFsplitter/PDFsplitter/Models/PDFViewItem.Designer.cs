@@ -42,9 +42,8 @@
             this.nameLabel.ForeColor = System.Drawing.Color.DarkBlue;
             this.nameLabel.Location = new System.Drawing.Point(16, 18);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(77, 16);
+            this.nameLabel.Size = new System.Drawing.Size(0, 16);
             this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "nameLabel";
             // 
             // progressBar
             // 
@@ -78,9 +77,8 @@
             this.pagesLabel.ForeColor = System.Drawing.Color.DarkBlue;
             this.pagesLabel.Location = new System.Drawing.Point(518, 31);
             this.pagesLabel.Name = "pagesLabel";
-            this.pagesLabel.Size = new System.Drawing.Size(38, 16);
+            this.pagesLabel.Size = new System.Drawing.Size(0, 16);
             this.pagesLabel.TabIndex = 14;
-            this.pagesLabel.Text = "      ";
             // 
             // percentLabel
             // 
@@ -89,9 +87,8 @@
             this.percentLabel.ForeColor = System.Drawing.Color.DarkBlue;
             this.percentLabel.Location = new System.Drawing.Point(442, 27);
             this.percentLabel.Name = "percentLabel";
-            this.percentLabel.Size = new System.Drawing.Size(33, 16);
+            this.percentLabel.Size = new System.Drawing.Size(0, 16);
             this.percentLabel.TabIndex = 15;
-            this.percentLabel.Text = "     ";
             // 
             // PDFViewItem
             // 

@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.pathTextBox = new MetroFramework.Controls.MetroTextBox();
             this.clearButton = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chooseFileButton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pathTextBox = new MetroFramework.Controls.MetroTextBox();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,21 +54,6 @@
             this.label1.Size = new System.Drawing.Size(194, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "Select a destination folder :";
-            // 
-            // pathTextBox
-            // 
-            this.pathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pathTextBox.BackColor = System.Drawing.Color.Gainsboro;
-            this.tableLayoutPanel.SetColumnSpan(this.pathTextBox, 2);
-            this.pathTextBox.Location = new System.Drawing.Point(3, 74);
-            this.pathTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.pathTextBox.Name = "pathTextBox";
-            this.pathTextBox.ReadOnly = true;
-            this.pathTextBox.Size = new System.Drawing.Size(675, 25);
-            this.pathTextBox.TabIndex = 27;
-            this.pathTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
             // 
             // clearButton
             // 
@@ -95,10 +80,10 @@
             this.panel.AutoScroll = true;
             this.panel.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel.SetColumnSpan(this.panel, 3);
-            this.panel.Location = new System.Drawing.Point(3, 105);
-            this.panel.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.panel.Location = new System.Drawing.Point(0, 105);
+            this.panel.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(704, 192);
+            this.panel.Size = new System.Drawing.Size(707, 192);
             this.panel.TabIndex = 28;
             // 
             // tableLayoutPanel
@@ -111,12 +96,12 @@
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel.Controls.Add(this.pictureBox1, 2, 2);
-            this.tableLayoutPanel.Controls.Add(this.panel, 0, 3);
             this.tableLayoutPanel.Controls.Add(this.chooseFileButton, 0, 5);
             this.tableLayoutPanel.Controls.Add(this.pathTextBox, 0, 2);
             this.tableLayoutPanel.Controls.Add(this.pictureBox2, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.clearButton, 1, 4);
             this.tableLayoutPanel.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel.Controls.Add(this.panel, 0, 3);
             this.tableLayoutPanel.Location = new System.Drawing.Point(123, 37);
             this.tableLayoutPanel.MinimumSize = new System.Drawing.Size(450, 400);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
@@ -197,6 +182,22 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // pathTextBox
+            // 
+            this.pathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pathTextBox.BackColor = System.Drawing.Color.Gainsboro;
+            this.tableLayoutPanel.SetColumnSpan(this.pathTextBox, 2);
+            this.pathTextBox.Location = new System.Drawing.Point(3, 74);
+            this.pathTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
+            this.pathTextBox.MaxLength = 3276700;
+            this.pathTextBox.Name = "pathTextBox";
+            this.pathTextBox.ReadOnly = true;
+            this.pathTextBox.Size = new System.Drawing.Size(675, 25);
+            this.pathTextBox.TabIndex = 27;
+            this.pathTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,12 +222,12 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button clearButton;
-        private MetroFramework.Controls.MetroTextBox pathTextBox;
         private System.Windows.Forms.Button chooseFileButton;
         private System.Windows.Forms.FlowLayoutPanel panel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroTextBox pathTextBox;
     }
 }
 

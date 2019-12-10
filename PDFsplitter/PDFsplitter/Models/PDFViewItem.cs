@@ -12,21 +12,32 @@ namespace PDFsplitter.Models
 {
     public partial class PDFViewItem : UserControl
     {
+     //   private Label label1 = new Label();
+        
         public PDFViewItem(string fileName, int filePages)
         {
             InitializeComponent();
-            nameLabel.Text = fileName;
-            pagesLabel.Text = filePages.ToString() + pageOrPages(filePages);
+
+            //label1.Location = new Point(77, 13);
+            //this.Controls.Add(label1);
+            //label1.Text = fileName;
+
+            //nameLabel.Text = fileName;
+            //pagesLabel.Text = filePages.ToString() + pageOrPages(filePages);
+
+
         }
-        public void progressValue(int pageNumber,int max)
+        public void progressValue(int pageNumber,int max,string name)
         {
             int percent = pageNumber * 100;
             double m = percent / max;
 
             this.BeginInvoke(new MethodInvoker(delegate
             {
+                nameLabel.Text = name;
                 progressBar.Value = Convert.ToInt32(m);
                 percentLabel.Text = progressBar.Value.ToString() + " %";
+                pagesLabel.Text = max.ToString() + pageOrPages(max);
                 if (progressBar.Value == progressBar.MaximumValue)
                 {
                     checkBox.Checked = true;
@@ -41,7 +52,7 @@ namespace PDFsplitter.Models
             else
                 return " pages";
         }
-        public void drawItem(int widthOfPanel)
+        public void drawItems(int widthOfPanel)
         {
             int x = widthOfPanel * 60;
             double y = x / 100;
@@ -51,5 +62,14 @@ namespace PDFsplitter.Models
             checkBox.Location = new System.Drawing.Point(progressBar.Width + 30, 25);
             pagesLabel.Location = new System.Drawing.Point(progressBar.Width + 65, 26);
         }
+
+        private int filePages;
+
+        public int PDFPages
+        {
+            get { return filePages; }
+            set { filePages = value;  }
+        }
     }
 }
+
