@@ -11,21 +11,10 @@ using System.Windows.Forms;
 namespace PDFsplitter.Models
 {
     public partial class PDFViewItem : UserControl
-    {
-     //   private Label label1 = new Label();
-        
+    {        
         public PDFViewItem(string fileName, int filePages)
         {
             InitializeComponent();
-
-            //label1.Location = new Point(77, 13);
-            //this.Controls.Add(label1);
-            //label1.Text = fileName;
-
-            //nameLabel.Text = fileName;
-            //pagesLabel.Text = filePages.ToString() + pageOrPages(filePages);
-
-
         }
         public void progressValue(int pageNumber,int max,string name)
         {

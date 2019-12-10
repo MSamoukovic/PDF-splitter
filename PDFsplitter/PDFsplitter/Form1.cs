@@ -26,6 +26,11 @@ namespace PDFsplitter
         {
             InitializeComponent();
             this.Resize += Form1_Resize;
+
+            if (pdfFiles.Count == 0)
+            {
+                clearButton.Enabled = false;
+            }
         }
         private void chooseFileButton_Click(object sender, EventArgs e)
         {
@@ -41,10 +46,13 @@ namespace PDFsplitter
                 OpenFileDialog openFileDialog1 = new OpenFileDialog
                 {
                     Filter = "PDF|*.PDF",
-                   Multiselect = true
+                    Multiselect = true
                 };
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
+
+                    pathTextBox.Enabled = false;
+
                     foreach (string item in openFileDialog1.FileNames)
                     {
                         pdfFile file = new pdfFile(item);
@@ -67,27 +75,29 @@ namespace PDFsplitter
         }
         private void createItem(pdfFile file) //ako pozivam na click
         {
-            PDFViewItem viewItem = new PDFViewItem(file.getName(), file.getNumberOfPages(file.getFileName()));        
+            PDFViewItem viewItem = new PDFViewItem(file.getName(), file.getNumberOfPages(file.getFileName()));
             viewItem.Width = panel.Width - 29;
             viewItem.drawItems(panel.Width);
-            viewItems.Add(viewItem);      
+            viewItems.Add(viewItem);
+
+            viewItem.Width = panel.Width - 33;
             panel.Controls.Add(viewItem);
         }
-           
-       //private void createViewItem(int i) ako pozivam u u metodi selectedFiles()
-       // {
-       //     string itemName = pdfFiles.ElementAt(i).getName();
-       //     int itemPages = pdfFiles.ElementAt(i).getNumberOfPages(pdfFiles.ElementAt(i).getFileName());
-       //     PDFViewItem viewItem = new PDFViewItem(itemName, itemPages);
-       //     viewItem.Width = panel.Width-29;
-       //     viewItem.drawItem(panel.Width);
-       //     viewItems.Add(viewItem);
-       //     panel.Controls.Add(viewItem);
-       // }
+
+        //private void createViewItem(int i) ako pozivam u u metodi selectedFiles()
+        // {
+        //     string itemName = pdfFiles.ElementAt(i).getName();
+        //     int itemPages = pdfFiles.ElementAt(i).getNumberOfPages(pdfFiles.ElementAt(i).getFileName());
+        //     PDFViewItem viewItem = new PDFViewItem(itemName, itemPages);
+        //     viewItem.Width = panel.Width-29;
+        //     viewItem.drawItem(panel.Width);
+        //     viewItems.Add(viewItem);
+        //     panel.Controls.Add(viewItem);
+        // }
 
         public void isBackgroundWorkerBusy()
         {
-            for(int j=0;j<backgroundWorkersList.Count;j++)
+            for (int j = 0; j < backgroundWorkersList.Count; j++)
             {
                 if (backgroundWorkersList[j].IsBusy == true)
                 {
@@ -96,25 +106,30 @@ namespace PDFsplitter
                 }
             }
             clearButton.Enabled = true;
-        }   
+        }
         private void createBackgroundWorker(int i)
         {
             BackgroundWorker pdfReader = new BackgroundWorker();
             backgroundWorkersList.Add(pdfReader);
-            pdfReader.DoWork += (obj, e) => pdfReader_DoWork(i);         
+            pdfReader.DoWork += (obj, e) => pdfReader_DoWork(i);
             pdfReader.ProgressChanged += PdfReader_ProgressChanged;
             pdfReader.WorkerReportsProgress = true;
             pdfReader.RunWorkerCompleted += pdfReader_RunWorkerCompleted;
             pdfReader.RunWorkerAsync();
             isBackgroundWorkerBusy();
+
         }
         private void PdfReader_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             isBackgroundWorkerBusy();
+            pathTextBox.Enabled = false;
+
         }
         private void pdfReader_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {           
+        {
             clearButton.Enabled = true;
+            pathTextBox.Enabled = true;
+
         }
         private void pdfReader_DoWork(int i)
         {
@@ -158,7 +173,7 @@ namespace PDFsplitter
                 int reportValue = Convert.ToInt32(value);
                 backgroundWorkersList[i].ReportProgress(reportValue);
 
-                  viewItems[i].progressValue(pageNumber, reader.NumberOfPages, pdfFiles.ElementAt(i).getName());
+                viewItems[i].progressValue(pageNumber, reader.NumberOfPages, pdfFiles.ElementAt(i).getName());
             }
         }
         public void splitAndSave(string pdfFilePath, string outputPath, int startPage, int interval, string pdfFileName)
@@ -201,6 +216,8 @@ namespace PDFsplitter
             viewItems.Clear();
             pdfFiles.Clear();
             backgroundWorkersList.Clear();
+            clearButton.Enabled = false;
+            pathTextBox.SelectionLength = 0; ;
         }
         private void chooseFileButton_DragDrop_1(object sender, DragEventArgs e)
         {
@@ -215,22 +232,36 @@ namespace PDFsplitter
             {
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
 
+                bool found = false;
+
                 foreach (string item in files)
                 {
                     if (System.IO.Path.GetExtension(item) != ".pdf")
                     {
                         draganddropMessageBox draganddropMessageBox = new draganddropMessageBox();
                         draganddropMessageBox.ShowDialog();
-                    }
-                    else
-                    {
-                        pdfFile file = new pdfFile(item);
-                        pdfFiles.Add(file);
-                        numberOfSelectedFiles++;
-                        createItem(file);
-
-                    }
+                        found = true;
+                        break;
+                    }                
                 }
+                if (!found)
+                {
+                    foreach (string item in files)
+                    {
+                        if (System.IO.Path.GetExtension(item) != ".pdf")
+                        {
+                            draganddropMessageBox draganddropMessageBox = new draganddropMessageBox();
+                            draganddropMessageBox.ShowDialog();
+                        }
+                        else
+                        {
+                            pdfFile file = new pdfFile(item);
+                            pdfFiles.Add(file);
+                            numberOfSelectedFiles++;
+                            createItem(file);
+                        }
+                    }
+                } 
                 selectedFiles(numberOfSelectedFiles);
             }
         }
@@ -252,22 +283,18 @@ namespace PDFsplitter
         }
         private void Form1_Resize(object sender, EventArgs e)
         {
-            Console.WriteLine(panel.Width);
+            pathTextBox.Width = panel.Width - 30;
+
             for (int j = 0; j < viewItems.Count; j++)
             {
-                viewItems[j].Width = panel.Width-30;
+                viewItems[j].Width = panel.Width - 33;
                 viewItems[j].drawItems(panel.Width);
                 panel.HorizontalScroll.Enabled = false;
                 panel.HorizontalScroll.Maximum = 0;
                 panel.AutoScroll = false;
                 panel.AutoScroll = true;
-
-                
+                pathTextBox.Width = panel.Width - 30;
             }
-
-            
-
-
         }        
     }
 }

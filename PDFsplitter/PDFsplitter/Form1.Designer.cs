@@ -36,7 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chooseFileButton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pathTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.pathTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -97,11 +97,11 @@
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel.Controls.Add(this.pictureBox1, 2, 2);
             this.tableLayoutPanel.Controls.Add(this.chooseFileButton, 0, 5);
-            this.tableLayoutPanel.Controls.Add(this.pathTextBox, 0, 2);
             this.tableLayoutPanel.Controls.Add(this.pictureBox2, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.clearButton, 1, 4);
             this.tableLayoutPanel.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel.Controls.Add(this.panel, 0, 3);
+            this.tableLayoutPanel.Controls.Add(this.pathTextBox, 0, 2);
             this.tableLayoutPanel.Location = new System.Drawing.Point(123, 37);
             this.tableLayoutPanel.MinimumSize = new System.Drawing.Size(450, 400);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
@@ -127,7 +127,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(678, 74);
@@ -184,18 +184,15 @@
             // 
             // pathTextBox
             // 
-            this.pathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pathTextBox.BackColor = System.Drawing.Color.Gainsboro;
             this.tableLayoutPanel.SetColumnSpan(this.pathTextBox, 2);
+            this.pathTextBox.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.pathTextBox.ForeColor = System.Drawing.Color.DarkBlue;
             this.pathTextBox.Location = new System.Drawing.Point(3, 74);
-            this.pathTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
-            this.pathTextBox.MaxLength = 3276700;
+            this.pathTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 1, 0);
             this.pathTextBox.Name = "pathTextBox";
             this.pathTextBox.ReadOnly = true;
-            this.pathTextBox.Size = new System.Drawing.Size(675, 25);
-            this.pathTextBox.TabIndex = 27;
+            this.pathTextBox.Size = new System.Drawing.Size(674, 23);
+            this.pathTextBox.TabIndex = 29;
             this.pathTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
             // 
             // Form1
@@ -227,7 +224,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroTextBox pathTextBox;
+        private System.Windows.Forms.TextBox pathTextBox;
     }
 }
 

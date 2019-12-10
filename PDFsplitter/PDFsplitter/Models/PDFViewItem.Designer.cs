@@ -48,7 +48,7 @@
             // progressBar
             // 
             this.progressBar.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.progressBar.BackColor = System.Drawing.Color.Silver;
+            this.progressBar.BackColor = System.Drawing.Color.Gainsboro;
             this.progressBar.BorderRadius = 3;
             this.progressBar.Location = new System.Drawing.Point(19, 37);
             this.progressBar.MaximumValue = 100;
@@ -101,7 +101,7 @@
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.nameLabel);
             this.Name = "PDFViewItem";
-            this.Size = new System.Drawing.Size(616, 50);
+            this.Size = new System.Drawing.Size(600, 50);
             this.ResumeLayout(false);
             this.PerformLayout();
 
