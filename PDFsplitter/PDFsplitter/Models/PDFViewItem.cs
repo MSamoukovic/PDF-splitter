@@ -27,6 +27,8 @@ namespace PDFsplitter.Models
                 progressBar.Value = Convert.ToInt32(m);
                 percentLabel.Text = progressBar.Value.ToString() + " %";
                 pagesLabel.Text = max.ToString() + pageOrPages(max);
+                checkBox.Enabled = false;
+
                 if (progressBar.Value == progressBar.MaximumValue)
                 {
                     checkBox.Checked = true;
