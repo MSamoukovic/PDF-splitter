@@ -30,6 +30,7 @@ namespace PDFsplitter.Models
                 if (progressBar.Value == progressBar.MaximumValue)
                 {
                     checkBox.Checked = true;
+                    checkBox.Enabled = false;
                     percentLabel.Visible = false;
                 }
             }));
@@ -50,14 +51,6 @@ namespace PDFsplitter.Models
             percentLabel.Location = new System.Drawing.Point(progressBar.Width + 20, 26);
             checkBox.Location = new System.Drawing.Point(progressBar.Width + 30, 25);
             pagesLabel.Location = new System.Drawing.Point(progressBar.Width + 65, 26);
-        }
-
-        private int filePages;
-
-        public int PDFPages
-        {
-            get { return filePages; }
-            set { filePages = value;  }
         }
     }
 }

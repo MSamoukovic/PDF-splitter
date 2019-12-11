@@ -36,7 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chooseFileButton = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pathTextBox = new System.Windows.Forms.TextBox();
+            this.destinationFolderTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -101,7 +101,7 @@
             this.tableLayoutPanel.Controls.Add(this.clearButton, 1, 4);
             this.tableLayoutPanel.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel.Controls.Add(this.panel, 0, 3);
-            this.tableLayoutPanel.Controls.Add(this.pathTextBox, 0, 2);
+            this.tableLayoutPanel.Controls.Add(this.destinationFolderTextBox, 0, 2);
             this.tableLayoutPanel.Location = new System.Drawing.Point(123, 37);
             this.tableLayoutPanel.MinimumSize = new System.Drawing.Size(450, 400);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
@@ -182,18 +182,18 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // pathTextBox
+            // destinationFolderTextBox
             // 
-            this.tableLayoutPanel.SetColumnSpan(this.pathTextBox, 2);
-            this.pathTextBox.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.pathTextBox.ForeColor = System.Drawing.Color.DarkBlue;
-            this.pathTextBox.Location = new System.Drawing.Point(3, 74);
-            this.pathTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 1, 0);
-            this.pathTextBox.Name = "pathTextBox";
-            this.pathTextBox.ReadOnly = true;
-            this.pathTextBox.Size = new System.Drawing.Size(674, 23);
-            this.pathTextBox.TabIndex = 29;
-            this.pathTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
+            this.tableLayoutPanel.SetColumnSpan(this.destinationFolderTextBox, 2);
+            this.destinationFolderTextBox.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.destinationFolderTextBox.ForeColor = System.Drawing.Color.DarkBlue;
+            this.destinationFolderTextBox.Location = new System.Drawing.Point(3, 74);
+            this.destinationFolderTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 1, 0);
+            this.destinationFolderTextBox.Name = "destinationFolderTextBox";
+            this.destinationFolderTextBox.ReadOnly = true;
+            this.destinationFolderTextBox.Size = new System.Drawing.Size(674, 23);
+            this.destinationFolderTextBox.TabIndex = 29;
+            this.destinationFolderTextBox.Click += new System.EventHandler(this.pathTextBox_Click);
             // 
             // Form1
             // 
@@ -224,7 +224,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox pathTextBox;
+        private System.Windows.Forms.TextBox destinationFolderTextBox;
     }
 }
 
