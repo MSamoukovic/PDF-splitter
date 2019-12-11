@@ -129,8 +129,8 @@ namespace PDFsplitter
             FileInfo file = new FileInfo(pdfFilePath);
 
             string pdfFileName = file.Name.Substring(0, file.Name.LastIndexOf(".")) + "-";
-            string pattern = @"\b[A-Z]{2,4}[0-9]{5,7}([A-Z]{1,2})?([0-9]{3,4})?(-)?[0-9]{3,4}";
-            // string pattern = @"\b[A-Z]{2,4}[0-9]{5,7}([A-Z]{1,2})?([0-9]{3,4})?\s?(-)?\s?[0-9]{3,4}"; with space
+            string pattern = @"\b[A-Z]{2,4}[0-9]{5,7}([A-Z]{1,2})?([0-9]{3,4})?(.\S)?(-)?(.\n)?(.\S)?[0-9]{3,4}";
+
             Regex rg = new Regex(pattern);
 
             for (int pageNumber = 1; pageNumber <= reader.NumberOfPages; pageNumber += interval)
@@ -139,13 +139,15 @@ namespace PDFsplitter
                 pageNameSuffix++;
 
                 text.Append(PdfTextExtractor.GetTextFromPage(reader, pageNumber));
+                // Console.WriteLine(text);
 
                 MatchCollection mc = rg.Matches(text.ToString());
                 if (mc.Count != 0)
                 {
                     for (int count = 0; count < mc.Count - mc.Count + 1; count++)
                     {
-                        string newPdfFileName = string.Format(mc[count].Value);
+
+                        string newPdfFileName = string.Format(Regex.Replace(mc[count].Value, @"\s+", " "));
                         splitAndSave(pdfFilePath, outputPath, pageNumber, interval, newPdfFileName);
                     }
                 }
