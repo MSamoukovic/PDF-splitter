@@ -5,6 +5,7 @@ using PDFsplitter.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -25,12 +26,6 @@ namespace PDFsplitter
         public Form1()
         {
             InitializeComponent();
-            this.Resize += Form1_Resize;
-
-            if (pdfFiles.Count == 0)
-            {
-                clearButton.Enabled = false;
-            }
         }
         private void chooseFileButton_Click(object sender, EventArgs e)
         {
@@ -63,7 +58,6 @@ namespace PDFsplitter
                 selectedFiles(numberOfSelectedFiles);
             }
         }
-
         private void selectedFiles(int numberOfSelectedFiles)
         {
             for (int i = pdfFiles.Count - numberOfSelectedFiles; i < pdfFiles.Count; i++)
@@ -74,7 +68,7 @@ namespace PDFsplitter
         }
         private void createItem(pdfFile file) //ako pozivam na click
         {
-            PDFViewItem viewItem = new PDFViewItem(file.getName(), file.getNumberOfPages(file.getFileName()));
+            PDFViewItem viewItem = new PDFViewItem();
             viewItem.Width = panel.Width - 29;
             viewItem.drawItems(panel.Width);
             viewItems.Add(viewItem);
@@ -92,7 +86,6 @@ namespace PDFsplitter
             pdfReader.RunWorkerCompleted += pdfReader_RunWorkerCompleted;
             pdfReader.RunWorkerAsync();
             isBackgroundWorkerBusy();
-
         }
         public void isBackgroundWorkerBusy()
         {
@@ -110,17 +103,15 @@ namespace PDFsplitter
         {
             isBackgroundWorkerBusy();
             destinationFolderTextBox.Enabled = false;
-
         }
         private void pdfReader_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             clearButton.Enabled = true;
             destinationFolderTextBox.Enabled = true;
-
         }
-        private void pdfReader_DoWork(int i)
+        private void pdfReader_DoWork(int selectedFile)
         {
-            string pdfFilePath = pdfFiles.ElementAt(i).getFileName();
+            string pdfFilePath = pdfFiles.ElementAt(selectedFile).getFileName();
             string outputPath = destinationFolderTextBox.Text;
             int interval = 1;
             int pageNameSuffix = 0;
@@ -160,9 +151,8 @@ namespace PDFsplitter
                 int percent = pageNumber * 100;
                 double value = percent / reader.NumberOfPages;
                 int reportValue = Convert.ToInt32(value);
-                backgroundWorkersList[i].ReportProgress(reportValue);
-
-                viewItems[i].progressValue(pageNumber, reader.NumberOfPages, pdfFiles.ElementAt(i).getName());
+                backgroundWorkersList[selectedFile].ReportProgress(reportValue);
+                viewItems[selectedFile].progressValue(pageNumber, reader.NumberOfPages, pdfFiles.ElementAt(selectedFile).getName());
             }
         }
         public void splitAndSave(string pdfFilePath, string outputPath, int startPage, int interval, string pdfFileName)
@@ -284,6 +274,13 @@ namespace PDFsplitter
                 panel.AutoScroll = true;
                 destinationFolderTextBox.Width = panel.Width - 30;
             }
-        }        
+        }
+        private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            string filePath = @"blank.pdf";
+
+            ProcessStartInfo startInfo = new ProcessStartInfo(filePath);
+            Process.Start(startInfo);
+        }
     }
 }

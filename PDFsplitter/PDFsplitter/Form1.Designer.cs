@@ -61,6 +61,7 @@
             this.clearButton.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel.SetColumnSpan(this.clearButton, 2);
             this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearButton.Enabled = false;
             this.clearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.clearButton.ForeColor = System.Drawing.Color.DarkBlue;
             this.clearButton.Location = new System.Drawing.Point(579, 300);
@@ -102,7 +103,7 @@
             this.tableLayoutPanel.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel.Controls.Add(this.panel, 0, 3);
             this.tableLayoutPanel.Controls.Add(this.destinationFolderTextBox, 0, 2);
-            this.tableLayoutPanel.Location = new System.Drawing.Point(123, 37);
+            this.tableLayoutPanel.Location = new System.Drawing.Point(130, 34);
             this.tableLayoutPanel.MinimumSize = new System.Drawing.Size(450, 400);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 12;
@@ -202,11 +203,15 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(958, 580);
             this.Controls.Add(this.tableLayoutPanel);
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(740, 580);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PDF-splitter";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.Form1_HelpButtonClicked);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
@@ -215,7 +220,6 @@
             this.ResumeLayout(false);
 
         }
-
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button clearButton;

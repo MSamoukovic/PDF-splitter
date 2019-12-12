@@ -12,7 +12,7 @@ namespace PDFsplitter.Models
 {
     public partial class PDFViewItem : UserControl
     {        
-        public PDFViewItem(string fileName, int filePages)
+        public PDFViewItem()
         {
             InitializeComponent();
         }
