@@ -118,6 +118,8 @@
     <Compile Include="MessageBox.Designer.cs">
       <DependentUpon>MessageBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Reader.cs" />
+    <Compile Include="Models\SplitAndSave.cs" />
     <Compile Include="Models\PDFViewItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
