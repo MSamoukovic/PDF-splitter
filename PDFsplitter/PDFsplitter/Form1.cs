@@ -155,13 +155,13 @@ namespace PDFsplitter
                 System.Diagnostics.Process.Start(destinationFolderTextBox.Text);
         }
       
-        private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
-        {
-            string filePath = @"blank.pdf";
+        //private void Form1_HelpButtonClicked(object sender, CancelEventArgs e)
+        //{
+        //    string filePath = @"blank.pdf";
 
-            ProcessStartInfo startInfo = new ProcessStartInfo(filePath);
-            Process.Start(startInfo);
-        }
+        //    ProcessStartInfo startInfo = new ProcessStartInfo(filePath);
+        //    Process.Start(startInfo);
+        //}
 
         private static void showMessageBox()
         {
